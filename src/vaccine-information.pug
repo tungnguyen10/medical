@@ -35,6 +35,7 @@ html(lang="vi")
     link(href="./templates/css/grid.css" rel="stylesheet")
     link(rel='stylesheet', href='./templates/css/vendor/swiper-bundle.min.css')
     link(rel='stylesheet', href='./templates/css/vendor/animate.min.css')
+    link(rel='stylesheet', href='./templates/css/vendor/jquery-ui.css')
     link(href="./templates/css/style.css" rel="stylesheet")
 
 body
@@ -56,19 +57,19 @@ body
             .form-group.col-lg-6.col-md-12.col-sm-12.col-xs-12
               label(for) Họ và tên 
                 i  *
-              input.form-control(type='text', name, required)
+              input.form-control(type='text', name, required, placeholder="Nguyễn Văn A")
             .form-group.col-lg-6.col-md-6.col-sm-12.col-xs-12
               label(for) Số CMND/CCCD 
                 i  *
-              input.form-control(type='text', name, required)
+              input.form-control(type='text', name, required, placeholder="123456789")
             .form-group.col-lg-4.col-md-6.col-sm-12.col-xs-12
               label(for) Số điện thoại 
                 i  *
-              input.form-control(type='text', name, required)
+              input.form-control(type='text', name, required, placeholder="0968123456")
             .form-group.col-lg-4.col-md-6.col-sm-12.col-xs-12
               label(for) Ngày sinh 
                 i  *
-              input.form-control(type='date', name, required)
+              input.form-control.datepick(type='text', name, required, placeholder="01-01-2002")
             .form-group.col-lg-4.col-md-6.col-sm-12.col-xs-12
               label(for="gender") Giới tính 
                 i  *
@@ -138,16 +139,15 @@ body
                   i  *
                 select#xacnhan.form-control(name)
                   option(value='0') Chưa tiêm
-                  option(value='1') Đã tiêm mũi 1
-                  option(value='2') Đã tiêm mũi 2
+                  option(value='1') Đã tiêm
           .row
             .form-group.col-lg-6.col-md-12.col-sm-12.col-xs-12.hide#mui1
               label.title_form(for) Đã tiêm mũi 1
               .row
                 .form-group.col-lg-6.col-md-12.col-sm-12.col-xs-12
-                  label(for) Ngày sinh 
+                  label(for) Ngày tiêm 
                     i  *
-                  input.form-control(type='date', name, required)
+                  input.form-control.datepick(type='text', name, required, placeholder="01-01-2002")
                 .col-lg-6.col-md-12.col-sm-12.col-xs-12
                   label(for) Loại Vắc xin 
                     i  *
@@ -157,9 +157,9 @@ body
               label.title_form(for) Đã tiêm mũi 2
               .row
                 .form-group.col-lg-6.col-md-12.col-sm-12.col-xs-12
-                  label(for) Ngày sinh 
+                  label(for) Ngày tiêm 
                     i  *
-                  input.form-control(type='date', name, required)
+                  input.form-control.datepick(type='text', name, required, placeholder="01-01-2002")
                 .col-lg-6.col-md-12.col-sm-12.col-xs-12
                   label(for) Loại Vắc xin 
                     i  *
@@ -182,5 +182,6 @@ body
 
   script(src="./templates/js/vendor/jquery.min.js")
   script(src='./templates/js/vendor/swiper-bundle.min.js')
+  script(src='./templates/js/vendor/jquery-ui.min.js')
   script(src='./templates/js/vendor/wow.min.js')
   script(src="./templates/js/default.js")

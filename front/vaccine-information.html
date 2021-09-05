@@ -29,6 +29,7 @@
     <link href="./templates/css/grid.css" rel="stylesheet">
     <link rel="stylesheet" href="./templates/css/vendor/swiper-bundle.min.css">
     <link rel="stylesheet" href="./templates/css/vendor/animate.min.css">
+    <link rel="stylesheet" href="./templates/css/vendor/jquery-ui.css">
     <link href="./templates/css/style.css" rel="stylesheet">
   </head>
 </html>
@@ -105,19 +106,19 @@
             <label class="title_form col-lg-12 col-md-12 col-sm-12 col-xs-12" for>Thông tin cơ bản</label>
             <div class="form-group col-lg-6 col-md-12 col-sm-12 col-xs-12">
               <label for>Họ và tên <i> *</i></label>
-              <input class="form-control" type="text" name required>
+              <input class="form-control" type="text" name required placeholder="Nguyễn Văn A">
             </div>
             <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
               <label for>Số CMND/CCCD <i> *</i></label>
-              <input class="form-control" type="text" name required>
+              <input class="form-control" type="text" name required placeholder="123456789">
             </div>
             <div class="form-group col-lg-4 col-md-6 col-sm-12 col-xs-12">
               <label for>Số điện thoại <i> *</i></label>
-              <input class="form-control" type="text" name required>
+              <input class="form-control" type="text" name required placeholder="0968123456">
             </div>
             <div class="form-group col-lg-4 col-md-6 col-sm-12 col-xs-12">
               <label for>Ngày sinh <i> *</i></label>
-              <input class="form-control" type="date" name required>
+              <input class="form-control datepick" type="text" name required placeholder="01-01-2002">
             </div>
             <div class="form-group col-lg-4 col-md-6 col-sm-12 col-xs-12">
               <label for="gender">Giới tính <i> *</i>
@@ -204,8 +205,7 @@
                 <label class="title_form" for>Đã tiêm vắc xin chưa? <i> *</i></label>
                 <select class="form-control" id="xacnhan" name>
                   <option value="0">Chưa tiêm</option>
-                  <option value="1">Đã tiêm mũi 1</option>
-                  <option value="2">Đã tiêm mũi 2</option>
+                  <option value="1">Đã tiêm</option>
                 </select>
               </div>
             </div>
@@ -215,8 +215,8 @@
               <label class="title_form" for>Đã tiêm mũi 1</label>
               <div class="row">
                 <div class="form-group col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                  <label for>Ngày sinh <i> *</i></label>
-                  <input class="form-control" type="date" name required>
+                  <label for>Ngày tiêm <i> *</i></label>
+                  <input class="form-control datepick" type="text" name required placeholder="01-01-2002">
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                   <label for>Loại Vắc xin <i> *</i></label>
@@ -230,8 +230,8 @@
               <label class="title_form" for>Đã tiêm mũi 2</label>
               <div class="row">
                 <div class="form-group col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                  <label for>Ngày sinh <i> *</i></label>
-                  <input class="form-control" type="date" name required>
+                  <label for>Ngày tiêm <i> *</i></label>
+                  <input class="form-control datepick" type="text" name required placeholder="01-01-2002">
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                   <label for>Loại Vắc xin <i> *</i></label>
@@ -400,6 +400,7 @@
   </div>
   <script src="./templates/js/vendor/jquery.min.js"></script>
   <script src="./templates/js/vendor/swiper-bundle.min.js"></script>
+  <script src="./templates/js/vendor/jquery-ui.min.js"></script>
   <script src="./templates/js/vendor/wow.min.js"></script>
   <script src="./templates/js/default.js"></script>
 </body>

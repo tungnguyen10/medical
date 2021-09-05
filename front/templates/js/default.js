@@ -119,6 +119,9 @@ function spriteSvg() {
 }
 $(function () {
   new WOW().init();
+  $(".datepick").datepicker({
+    dateFormat: "dd-mm-yy"
+  });
   spriteSvg();
   $('.nav-link').click(function () {
     var tab_id = $(this).attr('data-tab');
@@ -267,9 +270,6 @@ $("a.btn-support").click(function (e) {
 
 $('#xacnhan').on('change', function () {
   if (this.value == 1) {
-    $('#mui1').removeClass("hide");
-    $('#mui2').addClass("hide");
-  } else if(this.value == 2){
     $('#mui1').removeClass("hide");
     $('#mui2').removeClass("hide");
   } 

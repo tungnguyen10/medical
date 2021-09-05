@@ -1,0 +1,80 @@
+doctype html
+html(lang="vi")
+  head
+    title #{TITLE}
+    meta(charset="utf-8")
+    meta(name="description" content="DESCRIPTION")
+    meta(name="keywords" content="KEYWORDS")
+    meta(name="format-detection" content="telephone=no")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel='shortcut icon' type='image/x-icon' href='/templates/images/favicon.png')
+    link(rel='icon' type='image/x-icon' href='/templates/images/favicon.png')
+    link(rel='canonical' href='https://vemaybaythanhtung.com/')
+    //- google
+    meta(itemprop='name' content='Vé máy bay thanh tùng')
+    meta(itemprop='description' content='DESCRIPTION')
+    meta(itemprop='image' content='/templates/images/icon.png')
+    //- Twitter
+    meta(name='twitter:card' content='summary_large_image')
+    meta(name='twitter:site' content='@publisher_handle')
+    meta(name='twitter:title' content='Vé máy bay thanh tùng')
+    meta(name='twitter:description' content='DESCRIPTION')
+    meta(name='twitter:creator' content='@author_handle')
+    meta(name='twitter:image:src' content='/templates/images/icon.png')
+    //- facebook
+    meta(property='og:title' content='Vé máy bay thanh tùng')
+    meta(property='og:type' content='article')
+    meta(property='og:url' content='https://vemaybaythanhtung.com/')
+    meta(property='og:image' content='/templates/images/icon.png')
+    meta(property='og:description' content='DESCRIPTION')
+    meta(property='og:site_name' content='Vé máy bay thanh tùng')
+
+    //- CSS
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet")
+    link(href="./templates/css/grid.css" rel="stylesheet")
+    link(rel='stylesheet', href='./templates/css/vendor/swiper-bundle.min.css')
+    link(rel='stylesheet', href='./templates/css/vendor/animate.min.css')
+    link(href="./templates/css/style.css" rel="stylesheet")
+
+body
+  //- header
+  block header
+    include ./elements/_header_top.pug
+  - var title_page = "Giới thiệu";
+  - var title_breadcrumb = "Giới thiệu";
+  - var about = true
+  block header
+    include ./elements/_header.pug
+    include ./elements/_bread-crumb.pug
+
+  section.page.js-animate.page_default
+    .container
+      .content-page.rte
+        p
+          | Ra đời với sứ mệnh cung cấp những dịch vụ y tế cao cấp, 
+          strong Công ty Cổ phần Brilitas Pharmaceuticals 
+          | mang tới cho người dân Hà Nội và các tỉnh lân cận một địa chỉ chăm sóc sức khỏe chuyên nghiệp và an toàn. Tại đây, bên cạnh việc được chăm sóc sức khỏe sinh sản toàn diện, được tôn trọng và thấu hiểu, người bệnh còn được trải nghiệm những tiện ích hoàn hảo của hệ thống dịch vụ y tế chất lượng; được lựa chọn chế độ thăm khám, phòng nghỉ dưỡng cũng như chế độ chăm sóc theo yêu cầu với chi phí thấp, thông tin bệnh nhân bảo mật tuyệt đối.
+        p
+          | Với mong muốn chăm sóc sức khỏe sinh sản cho cộng đồng người Việt,
+          strong  
+          | đáp ứng đầy đủ các tiêu chí: 
+          em phòng khám trực thuộc Sở Y tế, bác sĩ chuyên khoa ưu tú, trang thiết bị y tế hiện đại mang tầm vóc quốc tế, phương pháp điều trị độc đáo, không gian sang trọng hiện đại, phòng khám quốc tế… 
+          | phục vụ khách hàng bằng những dịch vụ y tế chuyên nghiệp, hoàn hảo nhất. Phòng khám hứa hẹn sẽ trở thành địa chỉ tin cậy nơi khách hàng an tâm sử dụng các dịch vụ chăm sóc sức khỏe đa dạng, chất lượng với mức chi phí hợp lý.
+        p Là cơ sở y tế được Sở Y tế cấp phép hoạt động chính thức, đảm bảo tính pháp lý cao. Phòng khám có thế mạnh về chăm sóc sức khỏe sinh sản, thăm khám và điều trị các bệnh phụ khoa, nam khoa, các bệnh lây truyền qua đường tình dục, vô sinh – hiếm muộn cho cả nam và nữ giới. Các danh mục khám chữa, hoạt động thăm khám phụ khoa, khám nam khoa đều được Sở Y tế cấp phép.
+        p Ban lãnh đạo cũng như đội ngũ bác sĩ, đội ngũ nhân viên y tế của phòng khám Đa khoa y học Quốc tế luôn nỗ lực phấn đấu vì sự phát triển chung của y học, vì lợi ích cộng đồng, nâng cao sức khỏe sinh lý – sinh sản cho người Việt.
+        .margin-top-0
+          a.btn-main.btn-schedule.margin-top-15(href='/dat-lich', title='Đặt lịch ngay')
+            span Đặt lịch ngay
+            i.fa.fa-arrow-right
+
+  //- footer
+  block footer
+    include ./elements/_footer.pug
+  block menu_mobile
+    include ./elements/_menu_mobile.pug
+
+  script(src="./templates/js/vendor/jquery.min.js")
+  script(src='./templates/js/vendor/swiper-bundle.min.js')
+  script(src='./templates/js/vendor/wow.min.js')
+  script(src="./templates/js/default.js")

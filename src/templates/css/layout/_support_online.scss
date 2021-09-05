@@ -1,0 +1,127 @@
+/*
+Call online
+*/
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+
+  &.infinite {
+    animation-iteration-count: infinite;
+  }
+
+  &.hinge {
+    animation-duration: 2s;
+  }
+
+  &.flipOutX,
+  &.flipOutY,
+  &.bounceIn,
+  &.bounceOut {
+    animation-duration: 0.75s;
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  animation-name: zoomIn;
+}
+
+.support-online {
+  position: fixed;
+  z-index: 999;
+  left: 15px;
+  bottom: 30px;
+  top: auto !important;
+
+  a {
+    position: relative;
+    margin: 20px 10px;
+    text-align: left;
+    width: 40px;
+    height: 40px;
+  }
+
+  i {
+    width: 40px;
+    height: 40px;
+    background: $keycolor;
+    color: $white;
+    border-radius: 100%;
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px;
+    position: relative;
+    z-index: 999;
+  }
+
+  a {
+    display: block;
+
+    span {
+      border-radius: 2px;
+      text-align: center;
+      background: $keycolor;
+      padding: 9px;
+      display: none;
+      width: 180px;
+      margin-left: 10px;
+      position: absolute;
+      color: $white;
+      z-index: 999;
+      top: 0px;
+      left: 40px;
+      transition: all 0.2s ease-in-out 0s;
+      animation: headerAnimation 0.7s 1;
+    }
+
+    &:hover span {
+      display: block;
+    }
+
+    span::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent $keycolor transparent transparent;
+      position: absolute;
+      left: -10px;
+      top: 10px;
+    }
+  }
+  .alo-circle {
+    width: 50px;
+    height: 50px;
+    top: -5px;
+    right: -5px;
+    position: absolute;
+    background-color: transparent;
+    border-radius: 100%;
+    border: 2px solid rgba(30,30,30,0.4);
+    border-color: $keycolor;
+    opacity: 0.5;
+  }
+  .alo-circle-fill {
+    width: 60px;
+    height: 60px;
+    top: -10px;
+    position: absolute;
+    transition: all 0.1s ease-in-out;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    transition: all 0.1s;
+    background-color: $keycolor;
+    opacity: 0.75;
+    right: -10px;
+  }
+}

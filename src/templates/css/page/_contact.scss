@@ -1,0 +1,254 @@
+
+.form-control {
+  font-family: $fontBody;
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 11.5px);
+  padding: .375rem 1rem;
+  font-size: 14px;
+  color: #444;
+  font-weight: 400;
+  line-height: 1.5;
+  background-clip: padding-box;
+  border: 1px solid #ebebeb;
+  background-color: #ebebeb;
+  border-radius: 1rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.group_contact {
+  fieldset {
+    padding: 0 15px;
+    border: none;
+    width: 100%;
+  }
+
+  input {
+    height: 45px;
+    padding: 0px 15px;
+
+    &::-webkit-input-placeholder,
+    &::-moz-placeholder,
+    &:-ms-input-placeholder {
+      color: #444;
+    }
+  }
+
+  .content-area {
+    min-height: 100px;
+    padding: 10px 15px;
+    border-radius: 10px !important;
+    resize: none;
+  }
+
+  input,
+  textarea {
+    border-color: #ebebeb;
+    background-color: #ebebeb;
+    font-size: 14px;
+    color: #444;
+    border-radius: 10px !important;
+    margin-bottom: 15px;
+  }
+
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder,
+  input::-moz-placeholder,
+  textarea::-moz-placeholder,
+  input:-ms-input-placeholder,
+  textarea:-ms-input-placeholder {
+    color: #444;
+  }
+
+  input:focus {
+    border-color: #ebebeb;
+    background-color: #ebebeb;
+    box-shadow: none;
+  }
+
+  textarea {
+    &:focus {
+      border-color: #ebebeb;
+      background-color: #ebebeb;
+      box-shadow: none;
+    }
+
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+}
+.wrapcontactin {
+  position: relative;
+  padding: 70px 100px;
+  background: $white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: -190px;
+
+  .logo-wrapper {
+    margin-bottom: 30px;
+    display: block;
+    text-align: left;
+    max-width: 250px;
+  }
+
+  p {
+    font-family: "Arial";
+    font-size: 14px;
+    color: #6e7874;
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .time_work {
+    width: 100%;
+
+    .itemfooter {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .r {
+      width: 100%;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+
+      .fa,
+      .fab,
+      .fas {
+        width: 30px;
+        text-align: left;
+        font-size: 14px;
+        color: #6e7874;
+        display: block;
+        height: 24px;
+        line-height: 24px;
+      }
+
+      span {
+        display: block;
+        width: calc(100% - 30px);
+        font-size: 14px;
+        color: #6e7874;
+      }
+
+      a {
+        display: block;
+        width: calc(100% - 30px);
+        -webkit-width: calc(100% - 30px);
+        -moz-width: calc(100% - 30px);
+        -o-width: calc(100% - 30px);
+        -os-width: calc(100% - 30px);
+        float: left;
+        font-size: 14px;
+        color: #6e7874;
+
+        &:hover {
+          color: $keycolor;
+        }
+      }
+    }
+  }
+
+  h4 {
+    font-family: "Arial";
+    font-size: 24px;
+    color: #444;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .wrapcontactin {
+    padding: 40px 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapcontactin {
+    padding: 30px 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapcontactin p {
+    max-width: 80%;
+  }
+}
+
+.page-login .title-head-contact:before {
+  width: 25%;
+}
+
+
+
+.thank_text {
+  color: $keycolor;
+  display: block;
+  float: left;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.google-map {
+  width: 100%;
+
+  .map {
+    width: 100%;
+    height: 450px;
+    background: #dedede;
+  }
+}
+
+@media (max-width: 543px) {
+  .page-login span.intr {
+    font-size: 13px !important;
+  }
+
+  .address .page_address .adr_title .title-head a {
+    width: 100%;
+    margin: 15px 0;
+  }
+}
+
+.iFrameMap {
+  .map {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+
+  iframe {
+    width: 100% !important;
+    height: 450px;
+  }
+}
+
+.title-head-contact {
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0px;
+}
+
+.page_contact {
+  padding-bottom: 40px;
+  margin-top: -10px;
+
+  label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+
+    em {
+      color: red;
+    }
+  }
+}

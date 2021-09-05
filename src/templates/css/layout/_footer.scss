@@ -1,0 +1,26 @@
+@charset "utf-8";
+@import "./base/_setting.scss";
+//------------------------------------------------------------------------------
+//
+//	footer
+//  
+//------------------------------------------------------------------------------
+footer {
+  border-top: 1px solid #ddd;
+  background: $bgColor;
+}
+
+@import "_top_footer.scss";
+@import "_support_online.scss";
+//------------------------------------------------------------------------------
+//
+//	copyright
+//  
+//------------------------------------------------------------------------------
+
+.copyright{
+  color: $white;
+  background: $keycolor-dark;
+  padding: 1rem 0;
+  font-size: 1.3rem;
+}

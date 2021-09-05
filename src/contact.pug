@@ -1,0 +1,112 @@
+doctype html
+html(lang="vi")
+  head
+    title #{TITLE}
+    meta(charset="utf-8")
+    meta(name="description" content="DESCRIPTION")
+    meta(name="keywords" content="KEYWORDS")
+    meta(name="format-detection" content="telephone=no")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel='shortcut icon' type='image/x-icon' href='/templates/images/favicon.png')
+    link(rel='icon' type='image/x-icon' href='/templates/images/favicon.png')
+    link(rel='canonical' href='https://vemaybaythanhtung.com/')
+    //- google
+    meta(itemprop='name' content='Vé máy bay thanh tùng')
+    meta(itemprop='description' content='DESCRIPTION')
+    meta(itemprop='image' content='/templates/images/icon.png')
+    //- Twitter
+    meta(name='twitter:card' content='summary_large_image')
+    meta(name='twitter:site' content='@publisher_handle')
+    meta(name='twitter:title' content='Vé máy bay thanh tùng')
+    meta(name='twitter:description' content='DESCRIPTION')
+    meta(name='twitter:creator' content='@author_handle')
+    meta(name='twitter:image:src' content='/templates/images/icon.png')
+    //- facebook
+    meta(property='og:title' content='Vé máy bay thanh tùng')
+    meta(property='og:type' content='article')
+    meta(property='og:url' content='https://vemaybaythanhtung.com/')
+    meta(property='og:image' content='/templates/images/icon.png')
+    meta(property='og:description' content='DESCRIPTION')
+    meta(property='og:site_name' content='Vé máy bay thanh tùng')
+
+    //- CSS
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet")
+    link(href="./templates/css/grid.css" rel="stylesheet")
+    link(rel='stylesheet', href='./templates/css/vendor/swiper-bundle.min.css')
+    link(rel='stylesheet', href='./templates/css/vendor/animate.min.css')
+    link(href="./templates/css/style.css" rel="stylesheet")
+
+body
+  //- header
+  block header
+    include ./elements/_header_top.pug
+  - var title_page = "Liên hệ";
+  - var title_breadcrumb = "Liên hệ";
+  - var contact = true
+  block header
+    include ./elements/_header.pug
+    include ./elements/_bread-crumb.pug
+
+  .page_contact.section
+    .wrapcontact.js-animate
+      .iFrameMap
+        #contact_map.map
+          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62692.591434675145!2d106.66034408595627!3d10.865764662049902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6beba7ae3a0953dd!2sAir%20ticket%20office%20Thanh%20Tung!5e0!3m2!1sen!2s!4v1630750339842!5m2!1sen!2s', style='border:0;', allowfullscreen, loading='lazy')
+    .container
+      .wrapcontactin
+        .row
+          .col-lg-5.col-md-5.col-sm-12.col-xs-12.js-animate
+            a.logo-wrapper(href='/')
+              img(src='./templates/images/logo.svg' alt='vé máy bay Thanh Tùng')
+            p Công ty Cổ phần Brilitas Pharmaceuticals tự hào về các kỹ năng được đào tạo cần thiết cho việc chuẩn bị kiểm tra đa dạng. Chúng tôi tin tưởng rằng chẩn đoán kịp thời có thể loại bỏ vết sẹo của nhiều bệnh nghiêm trọng. Nó có thể được thực hiện nếu bạn tham khảo ý kiến bác sĩ cho các bệnh nghi ngờ.
+            .time_work
+              .itemfooter.cont
+                .r
+                  i.fas.fa-map-marker-alt
+                  span Tầng 6, 266 Đội Cấn, Ba Đình, Hà Nội
+                .r
+                  i.fas.fa-envelope
+                  a(href='mailto:ego.deploy@gmail.com') ego.deploy@gmail.com
+                .r
+                  i.fas.fa-phone
+                  a.fone(href='tel:19006750') 1900 6750
+          .col-lg-7.col-md-7.col-sm-12.col-xs-12.js-animate
+            .section.right_contact
+              h4.
+                
+                Nhập thông tin của bạn
+                
+              #pagelogin
+                form#contact
+                    
+                  .form-signup
+                    .row.group_contact
+                      .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                        .row
+                          fieldset.col-lg-6.col-md-6.col-sm-12.col-xs-12
+                            input.form-control(placeholder='Tên của bạn', type='text', required, name='contact[Name]')
+                          fieldset.col-lg-6.col-md-6.col-sm-12.col-xs-12
+                            input.form-control#Phone(placeholder='Số điện thoại', type='text', pattern='\d+', name='contact[Phone]')
+                      .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                        .row
+                          fieldset.col-lg-6.col-md-6.col-sm-12.col-xs-12
+                            input#email1.form-control(placeholder='Email', type='email', pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$', required, name='contact[email]')
+                          fieldset.col-lg-6.col-md-6.col-sm-12.col-xs-12
+                            input.form-control#Address(placeholder='Địa chỉ', type='text', name='contact[Address]')
+                      fieldset
+                        textarea#comment.form-control.content-area(placeholder='Nội dung', name='contact[body]', rows='5', required)
+                      fieldset
+                        button.btn.btn-main(type='submit')
+                          | Gửi ngay 
+                          i.fa.fa-arrow-right
+  //- footer
+  block footer
+    include ./elements/_footer.pug
+  block menu_mobile
+    include ./elements/_menu_mobile.pug
+
+  script(src="./templates/js/vendor/jquery.min.js")
+  script(src='./templates/js/vendor/swiper-bundle.min.js')
+  script(src='./templates/js/vendor/wow.min.js')
+  script(src="./templates/js/default.js")

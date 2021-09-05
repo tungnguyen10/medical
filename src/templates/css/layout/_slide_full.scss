@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+.swiper_slidefull{
+  height: 40vw;
+  @include pc{
+  height: 35vw;
+  }
+  .swiper-slide{
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

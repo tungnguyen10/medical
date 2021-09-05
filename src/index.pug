@@ -1,0 +1,434 @@
+doctype html
+html(lang="vi")
+  head
+    title #{TITLE}
+    meta(charset="utf-8")
+    meta(name="description" content="DESCRIPTION")
+    meta(name="keywords" content="KEYWORDS")
+    meta(name="format-detection" content="telephone=no")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel='shortcut icon' type='image/x-icon' href='/templates/images/favicon.png')
+    link(rel='icon' type='image/x-icon' href='/templates/images/favicon.png')
+    link(rel='canonical' href='https://vemaybaythanhtung.com/')
+    //- google
+    meta(itemprop='name' content='Vé máy bay thanh tùng')
+    meta(itemprop='description' content='DESCRIPTION')
+    meta(itemprop='image' content='/templates/images/icon.png')
+    //- Twitter
+    meta(name='twitter:card' content='summary_large_image')
+    meta(name='twitter:site' content='@publisher_handle')
+    meta(name='twitter:title' content='Vé máy bay thanh tùng')
+    meta(name='twitter:description' content='DESCRIPTION')
+    meta(name='twitter:creator' content='@author_handle')
+    meta(name='twitter:image:src' content='/templates/images/icon.png')
+    //- facebook
+    meta(property='og:title' content='Vé máy bay thanh tùng')
+    meta(property='og:type' content='article')
+    meta(property='og:url' content='https://vemaybaythanhtung.com/')
+    meta(property='og:image' content='/templates/images/icon.png')
+    meta(property='og:description' content='DESCRIPTION')
+    meta(property='og:site_name' content='Vé máy bay thanh tùng')
+
+    //- CSS
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet")
+    link(href="./templates/css/grid.css" rel="stylesheet")
+    link(rel='stylesheet', href='./templates/css/vendor/swiper-bundle.min.css')
+    link(rel='stylesheet', href='./templates/css/vendor/animate.min.css')
+    link(href="./templates/css/style.css" rel="stylesheet")
+    link(href="./templates/css/index.css" rel="stylesheet")
+
+body
+  //- header
+  block header
+    include ./elements/_header_top.pug
+  - var home = true
+  block header
+    include ./elements/_header.pug
+  //- banner
+  block banner
+    include ./elements/_slide_full.pug
+
+  section.section_about.js-animate
+    .container
+      .row
+        .col-md-6.col-xl-6.pr-xl-7
+          .department-tabs2
+            .wow.animate__rotateInUpLeft(data-wow-duration='1s', data-wow-delay='1s').department-tab2
+              .department-tab2-number 1
+              .department-tab2-text Thiết bị hiện đại
+              .department-tab2-decor
+            .wow.animate__rotateInDownRight(data-wow-duration='1s', data-wow-delay='1s').department-tab2
+              .department-tab2-number 2
+              .department-tab2-text Chất lượng cao
+              .department-tab2-decor
+            .wow.animate__rotateInUpLeft(data-wow-duration='1s', data-wow-delay='1s').department-tab2
+              .department-tab2-number 3
+              .department-tab2-text Đội ngũ lành nghề
+              .department-tab2-decor
+            .wow.animate__rotateInDownRight(data-wow-duration='1s', data-wow-delay='1s').department-tab2
+              .department-tab2-number 4
+              .department-tab2-text Chăm sóc chu đáo
+              .department-tab2-decor
+          .department-tabs2-bg
+            img(src='./templates/images/bg-department.png' alt='bg')
+        .col-md-6.col-xl-6
+          .wow.animate__zoomIn(data-wow-duration='1s', data-wow-delay='1.5s').department-carousel2
+            .department-item
+              .h-sub Giới thiệu
+              h2.title
+                | Tổng quan
+                br
+                | Công ty cổ phần 
+                span Brilitas
+              p Công ty Cổ phần Brilitas Pharmaceuticals  hoạt động đa dạng trong lĩnh vực Dược phẩm tại thị trường Việt Nam như phân phối, bán lẻ thuốc, thiết bị y tế, mỹ phẩm, thực phẩm chức năng, tư vấn dược phẩm và chăm sóc sức khỏe, dịch vụ xuất nhập khẩu và cho thuê kho bãi, đăng ký các loại giấy phép GPP, GMP, GLP, GSP, GDP,… Không những vậy, Brilitas còn là  đối tác Dược phẩm của EU, Mỹ, Úc, Hàn và Nhật Bản trong việc đăng ký, phân phối và bán lẻ Dược phẩm, Thực phẩm bảo vệ sức khỏe và Thiết bị y tế tại thị trường Việt Nam. 
+              ul
+                li Tất cả các báo cáo cho khách hàng được thực hiện đơn giản và dễ hiểu
+                li Trang web thân thiện với người dùng
+                li Trang web dễ dàng được tùy chỉnh dựa vào thiết lập tối ưu.
+              a.btn-main(href='#')
+                span xem thêm
+                i.fa.fa-angle-double-right
+  section.section_service_tab.js-animate
+    .container
+      .wow.animate__flipInX(data-wow-duration='1s', data-wow-delay='1.5s').title-wrap.text-center
+        h2.h1.double-title(data-title='Tổng Quát')
+          span
+            | Xét nghiệm
+            span.d-sm-none
+            |  chuẩn đoán
+        .h-decor
+      ul.nav-pills-icons
+        li.wow.animate__flipInX(data-wow-duration='1s', data-wow-delay='1.5s').nav-link.active(data-tab='tabservice-1')
+          .icon
+            img(src='./templates/images/icon_tab_1.png', alt='icon')
+          span Tầm soát ung thư
+        li.wow.animate__flipInX(data-wow-duration='1s', data-wow-delay='1.8s').nav-link(data-tab='tabservice-2')
+          .icon
+            img(src='./templates/images/icon_tab_2.png', alt='icon')
+          span Mô học
+        li.wow.animate__flipInX(data-wow-duration='1s', data-wow-delay='2.1s').nav-link(data-tab='tabservice-3')
+          .icon
+            img(src='./templates/images/icon_tab_3.png', alt='icon')
+          span Khám tổng quát
+        li.wow.animate__flipInX(data-wow-duration='1s', data-wow-delay='2.4s').nav-link(data-tab='tabservice-4')
+          .icon
+            img(src='./templates/images/icon_tab_4.png', alt='icon')
+          span Xét nghiệm máu
+        li.wow.animate__flipInX(data-wow-duration='1s', data-wow-delay='2.7s').nav-link(data-tab='tabservice-5')
+          .icon
+            img(src='./templates/images/icon_tab_5.png', alt='icon')
+          span Xét nghiệm di truyền
+        li.wow.animate__flipInX(data-wow-duration='1s', data-wow-delay='3s').nav-link(data-tab='tabservice-6')
+          .icon
+            img(src='./templates/images/icon_tab_6.png', alt='icon')
+          span Tế bào học
+      #tab-content.tab-content.mt-2.mt-sm-4
+        #tabservice-1.tab-pane.active(role='tabpanel', aria-expanded='true')
+          .row
+            .col-md-6
+              .photo.wow.animate__zoomIn(data-wow-duration='1s', data-wow-delay='0.5'): img.img-fluid(src='./templates/images/img_tab_1.jpeg', alt='Tầm soát ung thư')
+            .col-md-6
+              .pt-xl-1.wow.animate__fadeInUp(data-wow-duration='1s', data-wow-delay='0.5')
+                h3 Tầm soát ung thư
+                .contentx
+                  p Mỗi năm Việt Nam có hơn 126.000 ca mắc mới mắc bệnh ung thư, trong số đó khoảng 94.000 người tử vong vì phát hiện quá muộn. Việt Nam cũng là một trong những quốc gia có tỷ lệ người dân đi tầm soát ung thư thấp nhất. Nếu được tầm soát và phát hiện sớm, những căn bệnh ung thư sau có thể chữa khỏi hoàn toàn:
+                  ul
+                    li
+                      strong Ung thư phổi
+                    li
+                      strong Ung thư gan
+                    li
+                      strong Ung thư dạ dày
+                    li
+                      strong Ung thư vú
+                    li
+                      strong Ung thư cổ tử cung
+                  p.
+                     Tầm soát ung thư là phương thức chẩn đoán nhằm phát hiện ra mầm mống ung thư hoặc khi khối u c...
+                    
+                .box-btn 
+                  a.btn-main.margin-top-15.margin-right-15(href='#', title='Xem thêm')
+                    span Xem thêm
+                    i.fas.fa-angle-double-right
+                  a.btn-main.btn-schedule.margin-top-15(href='#', title='Đặt lịch ngay')
+                    span Đặt lịch ngay
+                    i.fa.fa-arrow-right
+        #tabservice-2.tab-pane
+          .row
+            .col-md-6
+              .photo.wow.animate__zoomIn(data-wow-duration='1s', data-wow-delay='0.5'): img.img-fluid(src='./templates/images/img_tab_2.jpeg',, alt='Mô học')
+            .col-md-6
+              .pt-xl-1.wow.animate__fadeInUp(data-wow-duration='1s', data-wow-delay='0.5')
+                h3 Mô học
+                .contentx
+                  p Xét nghiệm chẩn đoán mô bệnh học là xét nghiệm thực hiện trên mẫu mô sau sinh thiết nội soi, sinh thiết kim hoặc trong bệnh phẩm phẫu thuật. Bệnh phẩm được bảo quản trong môi trường formol pha theo tỷ lệ quy định rồi được chuyển về phòng xét nghiệm giải phẫu bệnh. 
+                  p Tại đây, mẫu bệnh phẩm được xử lí theo đúng quy trình xét nghiệm để đưa ra kết quả chính xác nhất. Kết quả xét nghiệm này là tiêu chuẩn vàng trong chẩn đoán bệnh lí ác tính. 
+                  p.
+                    Xét nghiệm chẩn đoán hóa mô miễn dịch nhằm giúp xác định chính xác nguồn gốc của các khối u kém biệt hóa. Xét nghiệm này thường đ...
+                .box-btn     
+                  a.btn-main.margin-top-15.margin-right-15(href='#', title='Xem thêm')
+                    span Xem thêm
+                    i.fas.fa-angle-double-right
+                  a.btn-main.btn-schedule.margin-top-15(href='#', title='Đặt lịch ngay')
+                    span Đặt lịch ngay
+                    i.fa.fa-arrow-right
+        #tabservice-3.tab-pane
+          .row
+            .col-md-6
+              .photo.wow.animate__zoomIn(data-wow-duration='1s', data-wow-delay='0.5'): img.img-fluid(src='./templates/images/img_tab_3.jpeg', alt='Khám tổng quát')
+            .col-md-6
+              .pt-xl-1.wow.animate__fadeInUp(data-wow-duration='1s', data-wow-delay='0.5')
+                h3 Khám tổng quát
+                .contentx
+                  p – Xét nghiệm chỉ số máu (nhằm phát hiện tình trạng thiếu máu và một số bệnh lý về máu, chẩn đoán tiểu đường và dung nạp Glucose, đánh giá chức năng thận, chức năng gan, tầm soát virus viêm gan B…)
+                  p – Xét nghiệm nước tiểu, nhằm phát hiện một số bệnh lý về thận, tiết niệu…
+                  p – Chẩn đoán hình ảnh, thăm dò chức năng (gồm: Chụp X Quang ngực thẳng, điện tim đồ, siêu âm ổ bụng tổng quát thường, chụp CT…).
+                  p.
+                    Tự hào là bệnh viện lớn, được xây dựng theo tiêu chuẩn “Bệnh viện – Khách sạn và lọt Top 3 bệnh viện có điểm chất lượng cao nhất – Bệnh viện ĐKQT Ego Medical là địa chỉ uy tín được nhiều doanh nghiệp đăng...
+                .box-btn     
+                  a.btn-main.margin-top-15.margin-right-15(href='#', title='Xem thêm')
+                    span Xem thêm
+                    i.fas.fa-angle-double-right
+                  a.btn-main.btn-schedule.margin-top-15(href='#', title='Đặt lịch ngay')
+                    span Đặt lịch ngay
+                    i.fa.fa-arrow-right
+        #tabservice-4.tab-pane
+          .row
+            .col-md-6
+              .photo.wow.animate__zoomIn(data-wow-duration='1s', data-wow-delay='0.5'): img.img-fluid(src='./templates/images/img_tab_4.jpeg' ,alt='Xét nghiệm máu')
+            .col-md-6
+              .pt-xl-1.wow.animate__fadeInUp(data-wow-duration='1s', data-wow-delay='0.5')
+                h3 Xét nghiệm máu
+                .contentx
+                  p Có rất nhiểu bệnh có thể phát hiện được qua xét nghiệm máu. Thông thường khi khám sức khỏe bác sĩ sẽ chỉ định thực hiện những xét nghiệm máu sau:
+                  ul
+                    li Xét nghiệm công thức máu
+                    li Xét nghiệm đường máu
+                    li Xét nghiệm mỡ máu
+                    li Xét nghiệm viêm gan B
+                    li Xét nghiệm HIV 
+                  p Tại khoa phòng cụ thể, các bác sĩ sẽ căn cứ vào tình trạng sức khoẻ và những yếu tố nguy cơ bệnh để chỉ định làm xét nghiệm máu.
+                  p Tới tầng 7 – Đơn vị xét nghiệm Bệnh viện Ego Medical. Người bệnh được chuyên viên y tế bệnh viện lấy máu xét nghiệm.
+                  p.
+                    Các dụng cụ lấy máu đều đảm bảo tính vệ sinh, vô ...
+                .box-btn     
+                  a.btn-main.margin-top-15.margin-right-15(href='#', title='Xem thêm')
+                    span Xem thêm
+                    i.fas.fa-angle-double-right
+                  a.btn-main.btn-schedule.margin-top-15(href='#', title='Đặt lịch ngay')
+                    span Đặt lịch ngay
+                    i.fa.fa-arrow-right
+        #tabservice-5.tab-pane
+          .row
+            .col-md-6
+              .photo.wow.animate__zoomIn(data-wow-duration='1s', data-wow-delay='0.5'): img.img-fluid(src='./templates/images/img_tab_5.jpeg', alt='Xét nghiệm di truyền')
+            .col-md-6
+              .pt-xl-1.wow.animate__fadeInUp(data-wow-duration='1s', data-wow-delay='0.5')
+                h3 Xét nghiệm di truyền
+                .contentx
+                  p
+                    b Xét nghiệm di truyền
+                    |  hay còn được gọi là xét nghiệm DNA, cho phép phân tích gen có khả năng gây bệnh di truyền, và cũng có thể được sử dụng để xác định quan hệ cha con/ mẹ con hoặc truy nguyên nguồn gốc tổ tiên của một người hoặc các mối quan hệ huyết thống giữa những người tham gia.
+                  p.
+                    Bên cạnh đó, các nghiên cứu ở mức độ nhiễm sắc thể của con người theo hướng rộng mở bao gồm xét nghiệm sinh hóa tìm kiếm khả năng hiện diện của các bệnh di truyền, hoặc dạng đột biến của các gen quan trọng gia tăng nguy cơ của các rối loạn di truyền. Xét nghiệm di truyền học xác định sự thay đổi trong nhiễm s...
+                .box-btn     
+                  a.btn-main.margin-top-15.margin-right-15(href='#', title='Xem thêm')
+                    span Xem thêm
+                    i.fas.fa-angle-double-right
+                  a.btn-main.btn-schedule.margin-top-15(href='#', title='Đặt lịch ngay')
+                    span Đặt lịch ngay
+                    i.fa.fa-arrow-right
+        #tabservice-6.tab-pane
+          .row
+            .col-md-6
+              .photo.wow.animate__zoomIn(data-wow-duration='1s', data-wow-delay='0.5'): img.img-fluid(src='./templates/images/img_tab_6.jpeg', alt='Tế bào học')
+            .col-md-6
+              .pt-xl-1.wow.animate__fadeInUp(data-wow-duration='1s', data-wow-delay='0.5')
+                h3 Tế bào học
+                .contentx
+                  p
+                    b Xét nghiệm tế bào học
+                    |  (Cytology hoặc Cytopathology) là xét nghiệm thông dụng và có giá trị cao. Xét nghiệm tế bào học khảo sát các tế bào rời hoặc một cụm tế bào lẫn trong chất dịch lỏng thấy được trên kính hiển vi. Có khi chỉ cần một giọt máu hoặc chất dịch như trong xét nghiệm FNA, nhưng có khi phải cần đến cả chai chất 
+                    b dịch màng phổi
+                    |  hoặc ổ bụng.
+                  p Lấy một mẫu thử tế bào, ít gây mệt, ít gây biến chứng và đỡ tốn kém hơn cho người bệnh so với sinh thiết mô bệnh học.
+                  p
+                    | Trong nhiều trường hợp, 
+                    b sinh thiết
+                    |  cho kết quả chính xác hơn. Tuy nhiên, với một số trường hợp...
+                .box-btn 
+                  a.btn-main.margin-top-15.margin-right-15(href='#', title='Xem thêm')
+                    span Xem thêm
+                    i.fas.fa-angle-double-right
+                  a.btn-main.btn-schedule.margin-top-15(href='#', title='Đặt lịch ngay')
+                    span Đặt lịch ngay
+                    i.fa.fa-arrow-right
+  section.section_medical_products.js-animate
+    .container
+      .wow.animate__flipInX(data-wow-duration='1s', data-wow-delay='1.5s').title-wrap.text-center
+        .h-sub.theme-color Chúng tôi có
+        h2.double-title(data-title='Tốt nhất')
+          a(href='#')
+            span Sản phẩm y tế
+        .h-decor
+      .box-products.wow.animate__lightSpeedInRight(data-wow-duration='1s', data-wow-delay='1.5s')
+        .swiper.swiper_product
+          .swiper-wrapper
+            .swiper-slide
+              .item-products
+                .product-thumbnail
+                  a.image_thumb.scale_hover(href='#')
+                    img(src='./templates/images/may-xong-mui-hong.jpeg', alt='Máy xông mũi họng')
+                  .viewmore
+                    i.far.fa-eye
+                    | Chi tiết
+                .product-info
+                  h3.product-name
+                    a(href='#') Máy xông mũi họng
+                  .price-box
+                    | 99.000₫
+                    span.compare-price 150.000₫
+            .swiper-slide
+              .item-products
+                .product-thumbnail
+                  a.image_thumb.scale_hover(href='#')
+                    img(src='./templates/images/may-do-huyet-ap-co-tay-beurer.jpeg', alt='Máy đo huyết áp cổ tay')
+                  .viewmore
+                    i.far.fa-eye
+                    | Chi tiết
+                .product-info
+                  h3.product-name
+                    a(href='#') Máy đo huyết áp cổ tay
+                  .price-box
+                    | 150.000₫
+                    span.compare-price 250.000₫
+            .swiper-slide
+              .item-products
+                .product-thumbnail
+                  a.image_thumb.scale_hover(href='#')
+                    img(src='./templates/images/khau-trang-vai-khang-khuan-nagakawa.jpeg', alt='Khẩu trang vải kháng khuẩn')
+                  .viewmore
+                    i.far.fa-eye
+                    | Chi tiết
+                .product-info
+                  h3.product-name
+                    a(href='#') Khẩu trang vải kháng khuẩn
+                  .price-box
+                    | 50.000₫
+                    span.compare-price 90.000₫
+          .swiper-pagination
+  section.section_blogs.js-animate
+    .container
+      .wow.animate__flipInX(data-wow-duration='1s', data-wow-delay='1.5s').title-wrap.text-center
+        h2.h1.double-title(data-title='Tin tức')
+          span
+            | mới nhất
+        .h-decor
+      
+      .list-blogs-link.wow.animate__lightSpeedInLeft(data-wow-duration='1s', data-wow-delay='1.5s')
+        .swiper.swiper_news
+          .swiper-wrapper
+            .swiper-slide
+              .blog-inner
+                .blog-img
+                  a.scale_hover.image_thumb(href='#')
+                    p: img(src='./templates/images/nhung-dieu-can-luu-y-ve-nuoc-rua-tay-diet-trung-2.jpeg', alt='Nước rửa tay khô không an toàn như bạn tưởng')
+                    .viewmore
+                      i.far.fa-eye
+                      | Chi tiết  
+                .blog_content
+                  span.time_post
+                    i.far.fa-calendar-alt
+                    | Thứ Fri, 07/09/2018
+                  h3
+                    a.text2line(href='#') Nước rửa tay khô không an toàn như bạn tưởng
+                          
+            .swiper-slide
+              .blog-inner
+                .blog-img
+                  a.scale_hover.image_thumb(href='#')
+                    p: img(src='./templates/images/thieu-mau-2-800x500.jpeg', alt='Lại báo động khan hiếm nhóm máu O trong điều trị')
+                    .viewmore
+                      i.far.fa-eye
+                      | Chi tiết  
+                .blog_content
+                  span.time_post
+                    i.far.fa-calendar-alt
+                    | Thứ Fri, 07/09/2018
+                  h3
+                    a.text2line(href='#') Lại báo động khan hiếm nhóm máu O trong điều trị
+                          
+            .swiper-slide
+              .blog-inner
+                .blog-img
+                  a.scale_hover.image_thumb(href='#')
+                    p: img(src='./templates/images/hiv-aids-services-800x500.jpeg', alt='áo động tình trạng trẻ nhiễm HIV ngày càng cao')
+                    .viewmore
+                      i.far.fa-eye
+                      | Chi tiết  
+                .blog_content
+                  span.time_post
+                    i.far.fa-calendar-alt
+                    | Thứ Fri, 07/09/2018
+                  h3
+                    a.text2line(href='#') Báo động tình trạng trẻ nhiễm HIV ngày càng cao
+          .swiper-pagination                   
+  section.section_faq.js-animate 
+    .container
+      .wow.animate__flipInX(data-wow-duration='1s', data-wow-delay='1s').title-wrap.text-center
+        h2.h1.double-title(data-title='Câu hỏi')
+          span
+            | khách hàng lưu ý
+        .h-decor
+      .row 
+        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+          .wrap_cauhoi
+            .row.wrap_question_js
+              .wow.animate__flipInX(data-wow-duration='1s', data-wow-delay='1.5s').col-lg-6.col-md-6.col-sm-6.col-xs-12
+                .itemquestion.col-click
+                  .title
+                    h4 Tôi cần mang theo những gì cho cuộc hẹn bác sĩ?
+                  .content.content_question
+                    p Quý vị vui lòng mang theo: Thẻ bảo hiểm y tế, nếu có, Chứng minh thư hoặc hộ chiếu hoặc thẻ học sinh, giấy khai sinh(với trẻ nhỏ dưới 6 tuổi) hoặc các giấy tờ tùy thân tương đương. Giấy chuyển tuyến từ các cơ sở y tế hoặc từ bác sĩ của quý vị, giấy hẹn khám lại, nếu có.
+                .itemquestion.col-click
+                  .title
+                    h4 Tôi có thể đặt hẹn khám như thế nào?
+                  .content.content_question
+                    p Việc đặt hẹn khám trước sẽ giúp cho Quý vị có thể chủ động thời gian đi khám và Bệnh viện cũng chủ động bố trí nhân lực khám giúp mang đến cho Quý vị dịch vụ tốt hơn. Quý vị cần đặt hẹn trước giờ dự định đến khám ít nhất 24 giờ, nhân viên của chúng tôi sẽ liên lạc lại với Quý vị để xác nhận đặt hẹn.
+                .itemquestion.col-click
+                  .title
+                    h4 Tôi sẽ gặp bác sĩ khám nào?
+                  .content.content_question
+                    p Quý vị có quyền lựa chọn bác sĩ nếu bác sĩ đó có lịch ở phòng khám. Trường hợp bác sĩ không có lịch khám ngày hôm đó, chúng tôi sẽ liên hệ với bác sĩ đó và quý vị có thể được khám bác sĩ đó nếu bác sĩ đồng ý.
+              .wow.animate__flipInX(data-wow-duration='1s', data-wow-delay='1.5s').col-lg-6.col-md-6.col-sm-6.col-xs-12
+                .itemquestion.col-click
+                  .title
+                    h4 Tôi sẽ mất thời gian bao lâu?
+                  .content.content_question
+                    p Quá trình khám bệnh của quý vị thông thường sẽ kéo dài trong khoảng 1-3 tiếng, tùy thuộc vào tình trạng bệnh, số lượng chỉ định cận lâm sàng và số lượng bệnh nhân khám trong ngày. Với các bệnh nhân có kết quả khám bất thường hoặc cần phải làm thêm các xét nghiệm chuyên sâu, thời gian khám có thể kéo dài hơn.
+                .itemquestion.col-click
+                  .title
+                    h4 Tôi có thể sử dụng hình thức thanh toán nào?
+                  .content.content_question
+                    p Quý vị có thể thanh toán bằng tiền mặt và/hoặc thẻ tín dụng (Master card/Visa card) và/hoặc thẻ ATM của các ngân hàng trong nước.
+                .itemquestion.col-click
+                  .title
+                    h4 Cần chuẩn bị gì trước khi khám sức khỏe định kỳ?
+                  .content.content_question
+                    p Cần chuẩn bị gì trước khi khám sức khỏe định kỳ? Để việc kiểm tra sức khỏe định kỳ đạt hiệu quả cao nhất, trước khi khám sức khỏe bạn cần: - Xem lại tiền sử sức khỏe của gia đình: cần báo cho bác sĩ biết các thông tin về sức khỏe và bệnh tật của các thành viên trong gia đình mình, từ đó bác sĩ sẽ đánh giá nguy cơ bệnh của bạn dựa trên tiền sử bệnh của gia đình gia đình vì yếu tố này có thể làm bạn tăng nguy cơ một số bệnh như đái tháo đường, ung thư, bệnh tim và đột quỵ.
+            p.text-center
+              a.btn-main(href='#')
+                span xem thêm
+                i.fa.fa-angle-double-right
+  
+  //- footer
+  block footer
+    include ./elements/_footer.pug
+  block menu_mobile
+    include ./elements/_menu_mobile.pug
+
+  script(src="./templates/js/vendor/jquery.min.js")
+  script(src='./templates/js/vendor/swiper-bundle.min.js')
+  script(src='./templates/js/vendor/wow.min.js')
+  script(src="./templates/js/default.js")

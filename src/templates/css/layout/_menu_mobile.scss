@@ -1,0 +1,243 @@
+.backdrop__body-backdrop___1rvky {
+  visibility: hidden;
+  position: fixed;
+  opacity: 0;
+  width: 100%;
+  left: 0;
+  top: 0 !important;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 999;
+  transition: opacity 0.5s ease;
+
+  &.active {
+    transition: opacity 0.5s ease;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .backdrop__body-backdrop___1rvky {
+    z-index: 999;
+  }
+}
+
+.mobile-main-menu {
+  height: 100%;
+  overflow-y: auto;
+  width: 290px;
+  position: fixed;
+  background-color: #fff;
+  transition: transform 0.5s;
+  z-index: 999999 !important;
+  top: 0 !important;
+  left: 0;
+  transform: translateX(-290px);
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0px transparent;
+    -moz-box-shadow: inset 0 0 0px transparent;
+    border-radius: 0px;
+    background-color: #fff;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0px;
+    background-color: #fff;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 0 0px transparent;
+    -moz-box-shadow: inset 0 0 0px transparent;
+    background-color: #e5e5e5;
+  }
+
+  &.active {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  .logo_mobile{
+    
+    a{
+      display: block;
+      padding: 5% 20%;
+    }
+  }
+  .ul-first-menu {
+    background-color: $keycolor;
+    padding: 24px 5px;
+    text-align: center;
+    position: relative;
+    height: 90px;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background: url(/templates/images/cover-waving-bg.svg) top;
+      background-repeat: no-repeat;
+      background-blend-mode: overlay;
+    }
+
+    div {
+      display: inline-block;
+      width: 50%;
+      text-align: center;
+      float: left;
+      height: 40px;
+      line-height: 40px;
+      position: relative;
+
+      a {
+        color: #fff;
+        display: block;
+        border: 1px solid #fff;
+        border-radius: 25px;
+        margin: 0 5px;
+        font-weight: 500;
+
+        &:hover,
+        &:focus {
+          color: $hover;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+  .mobile-support {
+    height: 40px;
+    background-color: #f3f5f7;
+    color: #505f77;
+    line-height: 40px;
+    text-align: center;
+    border-top: 1px solid #eaedf1;
+    svg .active-path{
+      fill: red;
+    }
+    img {
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    a {
+      color: #505f77;
+      font-weight: 600;
+      
+    }
+  }
+
+  .la-scroll-fix-infor-user {
+    height: calc(100% - 130px);
+    height: -moz-calc(100% - 130px);
+    height: -webkit-calc(100% - 130px);
+    height: -o-calc(100% - 130px);
+    overflow: auto;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    display: block;
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 0px transparent;
+      -moz-box-shadow: inset 0 0 0px transparent;
+      border-radius: 0px;
+      background-color: #fff;
+    }
+
+    &::-webkit-scrollbar {
+      width: 0px;
+      background-color: #fff;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 0px;
+      -webkit-box-shadow: inset 0 0 0px transparent;
+      -moz-box-shadow: inset 0 0 0px transparent;
+      background-color: #e5e5e5;
+    }
+
+    .la-nav-list-items .ng-scope {
+      position: relative;
+      display: block;
+      &.active{
+        a{
+          color:$keycolor;
+        }
+      }
+
+      a {
+        padding: 9px 7.5px;
+        padding-right: 25px;
+        text-decoration: none;
+        color: #383838;
+        display: block;
+        border-bottom: 0.5px solid #ccd2db;
+        text-transform: uppercase;
+        position: relative;
+
+        svg {
+          height: 14px !important;
+          width: 14px !important;
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translate(0, -50%);
+
+          &.active {
+            -moz-transform: rotate(-180deg);
+            -webkit-transform: rotate(-180deg);
+            -o-transform: rotate(-180deg);
+            -ms-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+            top: 10px;
+          }
+        }
+
+        &:hover,
+        &:focus {
+          color: $hover;
+        }
+      }
+
+      .ul-has-child {
+        display: none;
+
+        > li {
+           a {
+            padding-left: 15px;
+            text-transform: none;
+          }
+
+           ul {
+            display: none;
+
+            > li {
+               a {
+                padding-left: 22.5px;
+              }
+               ul {
+                display: none;
+    
+                > li {
+                   a {
+                    padding-left: 32px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

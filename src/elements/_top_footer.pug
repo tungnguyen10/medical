@@ -1,0 +1,74 @@
+.topfoter
+  .container
+    .top-footer
+      .row
+        .col-lg-4.col-md-12.col-sm-12.col-xs-12
+          .logo-footer
+            a.logo-wrapper(href='/')
+              img(src='./templates/images/logo.svg' alt='vé máy bay Thanh Tùng')
+          h4.large Công ty Cổ phần Brilitas
+          ul.ul_col
+            li
+              span.icon
+                i.fa.fa-home
+              span.right
+                span
+                  span.b Trụ sở:  
+                  | 141/58A Đường 28 Phường 6, Quận Gò Vấp, Tp.HCM
+            li
+              span.icon
+                i.fa.fa-phone
+              span.right
+                a.fone(href='tel:0327421742')
+                  span.b Hotline:  
+                  | 032 742 1742
+            li
+              span.icon
+                i.fa.fa-envelope
+              span.right
+                a(href='mailto:laotama@icloud.com')
+                  span.b Email:
+                  | laotama@icloud.com
+          block social
+            include _social.pug
+        .col-lg-5.col-md-6.col-sm-8.col-xs-12
+          .row.rowpading
+            .col-lg-6.col-md-6.col-sm-6.col-xs-12.footer-click
+              h4.cliked Thông tin công ty
+              ul.toggle-mn
+                li
+                  a.ef(href='/') Trang chủ
+                li
+                  a.ef(href='/gioi-thieu') Giới thiệu
+                li
+                  a.ef(href='/collections/all') Hạng mục điều trị
+                li
+                  a.ef(href='/collections/all') Dịch vụ
+                li
+                  a.ef(href='/bang-gia-dich-vu') Bảng giá dịch vụ
+                li
+                  a.ef(href='/tin-tuc') Tin tức
+                li
+                  a.ef(href='/lien-he') Liên hệ
+            .col-lg-6.col-md-6.col-sm-6.col-xs-12.footer-click
+              h4.cliked Hỗ trợ khách hàng
+              ul.toggle-mn
+                li
+                  a.ef(href='/') Trang chủ
+                li
+                  a.ef(href='/gioi-thieu') Giới thiệu
+                li
+                  a.ef(href='/collections/all') Hạng mục điều trị
+                li
+                  a.ef(href='/collections/all') Dịch vụ
+                li
+                  a.ef(href='/bang-gia-dich-vu') Bảng giá dịch vụ
+                li
+                  a.ef(href='/tin-tuc') Tin tức
+                li
+                  a.ef(href='/lien-he') Liên hệ
+          
+        .col-lg-3.col-md-6.col-sm-4.col-xs-12
+          block timeworking
+            include _timeworking.pug          
+

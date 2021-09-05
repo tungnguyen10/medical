@@ -1,0 +1,186 @@
+doctype html
+html(lang="vi")
+  head
+    title #{TITLE}
+    meta(charset="utf-8")
+    meta(name="description" content="DESCRIPTION")
+    meta(name="keywords" content="KEYWORDS")
+    meta(name="format-detection" content="telephone=no")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel='shortcut icon' type='image/x-icon' href='/templates/images/favicon.png')
+    link(rel='icon' type='image/x-icon' href='/templates/images/favicon.png')
+    link(rel='canonical' href='https://vemaybaythanhtung.com/')
+    //- google
+    meta(itemprop='name' content='Vé máy bay thanh tùng')
+    meta(itemprop='description' content='DESCRIPTION')
+    meta(itemprop='image' content='/templates/images/icon.png')
+    //- Twitter
+    meta(name='twitter:card' content='summary_large_image')
+    meta(name='twitter:site' content='@publisher_handle')
+    meta(name='twitter:title' content='Vé máy bay thanh tùng')
+    meta(name='twitter:description' content='DESCRIPTION')
+    meta(name='twitter:creator' content='@author_handle')
+    meta(name='twitter:image:src' content='/templates/images/icon.png')
+    //- facebook
+    meta(property='og:title' content='Vé máy bay thanh tùng')
+    meta(property='og:type' content='article')
+    meta(property='og:url' content='https://vemaybaythanhtung.com/')
+    meta(property='og:image' content='/templates/images/icon.png')
+    meta(property='og:description' content='DESCRIPTION')
+    meta(property='og:site_name' content='Vé máy bay thanh tùng')
+
+    //- CSS
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet")
+    link(href="./templates/css/grid.css" rel="stylesheet")
+    link(rel='stylesheet', href='./templates/css/vendor/swiper-bundle.min.css')
+    link(rel='stylesheet', href='./templates/css/vendor/animate.min.css')
+    link(href="./templates/css/style.css" rel="stylesheet")
+
+body
+  //- header
+  block header
+    include ./elements/_header_top.pug
+  - var title_page = "Đăng ký xét nghiệm COVID-19";
+  - var title_breadcrumb = "Tờ khai thông tin";
+  block header
+    include ./elements/_header.pug
+    include ./elements/_bread-crumb.pug
+
+  section.page.page_default.js-animate
+    form.form-register(action, method='post')
+      .form-row
+        .container
+          .row 
+            label.title_form.col-lg-12.col-md-12.col-sm-12.col-xs-12(for) Thông tin cơ bản
+            .form-group.col-lg-6.col-md-12.col-sm-12.col-xs-12
+              label(for) Họ và tên 
+                i  *
+              input.form-control(type='text', name, required)
+            .form-group.col-lg-6.col-md-6.col-sm-12.col-xs-12
+              label(for) Số CMND/CCCD 
+                i  *
+              input.form-control(type='text', name, required)
+            .form-group.col-lg-4.col-md-6.col-sm-12.col-xs-12
+              label(for) Số điện thoại 
+                i  *
+              input.form-control(type='text', name, required)
+            .form-group.col-lg-4.col-md-6.col-sm-12.col-xs-12
+              label(for) Ngày sinh 
+                i  *
+              input.form-control(type='date', name, required)
+            .form-group.col-lg-4.col-md-6.col-sm-12.col-xs-12
+              label(for="gender") Giới tính 
+                i  *
+                .gender
+                  p
+                    label
+                      input(type='radio', value='Nam', checked, name='fields[gender]')
+                      |  Nam
+                  p
+                    label
+                      input(type='radio', value='Nu', name='fields[gender]')
+                      |  Nữ
+                  p
+                    label
+                      input(type='radio', value='Khac', name='fields[gender]')
+                      |  Khác 
+                div
+                  label.error(for='fields[gender]')
+          .form-group
+            label.title_form(for) Địa chỉ thường trú
+            .row
+              .col-lg-4.col-md-6.col-sm-12.col-xs-12
+                label(for) Tỉnh/Thành phố 
+                  i  *
+                select.form-control(type='text', name, required)
+                  option(value='0') Tỉnh/Thành phố
+              .col-lg-4.col-md-6.col-sm-12.col-xs-12
+                label(for) Quận/huyện 
+                  i  *
+                select.form-control(type='text', name, required)
+                  option(value='0') Quận/huyện
+              .col-lg-4.col-md-6.col-sm-12.col-xs-12
+                label(for) Xã/phường 
+                  i  *
+                select.form-control(type='text', name, required)
+                  option(value='0') Xã/phường
+              .col-lg-12.col-md-6.col-sm-12.col-xs-12
+                label(for) Số nhà, tên đường 
+                  i  *
+                input.form-control(type='text', name, required, placeholder='Số nhà, tên đường')
+          .form-group
+            label.title_form(for) Địa chỉ tạm trú
+            .row
+              .col-lg-4.col-md-6.col-sm-12.col-xs-12
+                label(for) Tỉnh/Thành phố 
+                  i  *
+                select.form-control(type='text', name, required)
+                  option(value='0') Tỉnh/Thành phố
+              .col-lg-4.col-md-6.col-sm-12.col-xs-12
+                label(for) Quận/huyện 
+                  i  *
+                select.form-control(type='text', name, required)
+                  option(value='0') Quận/huyện
+              .col-lg-4.col-md-6.col-sm-12.col-xs-12
+                label(for) Xã/phường 
+                  i  *
+                select.form-control(type='text', name, required)
+                  option(value='0') Xã/phường
+              .col-lg-12.col-md-6.col-sm-12.col-xs-12
+                label(for) Số nhà, tên đường 
+                  i  *
+                input.form-control(type='text', name, required, placeholder='Số nhà, tên đường')
+          .row 
+            .col-lg-6.col-md-12.col-sm-12.col-xs-12
+              .form-group.inline
+                label.title_form(for) Đã tiêm vắc xin chưa? 
+                  i  *
+                select#xacnhan.form-control(name)
+                  option(value='0') Chưa tiêm
+                  option(value='1') Đã tiêm mũi 1
+                  option(value='2') Đã tiêm mũi 2
+          .row
+            .form-group.col-lg-6.col-md-12.col-sm-12.col-xs-12.hide#mui1
+              label.title_form(for) Đã tiêm mũi 1
+              .row
+                .form-group.col-lg-6.col-md-12.col-sm-12.col-xs-12
+                  label(for) Ngày sinh 
+                    i  *
+                  input.form-control(type='date', name, required)
+                .col-lg-6.col-md-12.col-sm-12.col-xs-12
+                  label(for) Loại Vắc xin 
+                    i  *
+                  select.form-control(type='text', name, required)
+                    option(value='0') Loại Vắc xin
+            .form-group.col-lg-6.col-md-12.col-sm-12.col-xs-12.hide#mui2
+              label.title_form(for) Đã tiêm mũi 2
+              .row
+                .form-group.col-lg-6.col-md-12.col-sm-12.col-xs-12
+                  label(for) Ngày sinh 
+                    i  *
+                  input.form-control(type='date', name, required)
+                .col-lg-6.col-md-12.col-sm-12.col-xs-12
+                  label(for) Loại Vắc xin 
+                    i  *
+                  select.form-control(type='text', name, required)
+                    option(value='0') Loại Vắc xin
+            
+          .form-btn
+            .form-group
+              input#camket(type='checkbox', name)
+              label(for='camket') Tôi cam đoan các thông tin khai báo là đúng sự thật và hoàn toàn chịu trách nhiệm trước pháp luật về tính chính xác của thông tin
+            button.btn-main(type='submit') 
+              span Đăng ký
+                i.fa.fa-angle-double-right
+                
+  //- footer
+  block footer
+    include ./elements/_footer.pug
+  block menu_mobile
+    include ./elements/_menu_mobile.pug
+
+  script(src="./templates/js/vendor/jquery.min.js")
+  script(src='./templates/js/vendor/swiper-bundle.min.js')
+  script(src='./templates/js/vendor/wow.min.js')
+  script(src="./templates/js/default.js")

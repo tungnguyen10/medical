@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+//==========================================================================
+//_default.scss
+//==========================================================================
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, section, article, aside, hgroup, header, footer, nav, dialog, figure, menu, video, audio, mark, time, canvas, details {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  //outline: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  background: transparent;
+}
+section, article, aside, hgroup, header, footer, main, nav, dialog, figure, figcaption {
+  display: block;
+}
+html {
+  font-size: 62.5%;
+}
+.text-center{
+  text-align: center;
+}
+em {
+  font-style: italic;
+}
+body {
+  line-height: 1;
+  -webkit-text-size-adjust: 100%;
+  -webkit-print-color-adjust: exact;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+:focus {
+  outline-color: $bodyColor;
+  
+}
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img {
+  -webkit-backface-visibility: hidden;
+  vertical-align: bottom;
+}
+b,strong {
+  font-weight: bold;
+  font-style: inherit;
+}
+
+.margin-top-15{
+  margin-top: 15px;
+} 
+.margin-right-15{
+  margin-right: 15px;
+}
+.margin-bottom-15{
+  margin-bottom: 15px;
+}
+.margin-bottom-25{
+  margin-bottom: 25px;
+}
+.content-page{
+  min-height: 400px;
+}
+
+.is-animate {
+    opacity: 0;
+    transform: translateY(50px);
+  &.is-animated {
+      opacity: 1;
+      transform: translateY(0);
+      transition-duration: 0.6s;
+      transition-delay: 0.3s;
+  }
+}
+.page{
+  display: block;
+  &.page_default {
+    padding: 40px 0;
+    min-height: 400px;
+    p{
+      padding: 0 0 15px ;
+    }
+  }
+}
+
+.text2line {
+  display: block;
+  overflow: hidden;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #444;
+  transition: 0.5s ease-in-out;
+  padding: 0 !important;
+  
+}
+.text3line{
+  display: block;
+  overflow: hidden;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  color: #444;
+  transition: 0.5s ease-in-out;
+  padding: 0 !important;
+}

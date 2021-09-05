@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+//------------------------------------------------------------------------------
+//  
+//	Setting
+//  
+//------------------------------------------------------------------------------
+// Break point
+$sm: 'max-width: 360px';
+$sp: 'max-width: 750px';
+$tab: 'max-width: 1024px';
+$tab_md:  'max-width: 992px';
+$tab_lg:  'max-width: 1024px';
+$pc: 'min-width: 751px';
+
+// Key color
+$keycolor: #39B54A;
+$keycolor_dark: #1C7C25;
+$white: #fff;
+$bodyColor: #444;
+$linkColor: #333;
+$bgColor: #f6f7f9;
+$hover: #EF4136;
+$icon_color:#cc9338;
+
+
+$fontBody: 'Montserrat', sans-serif;
+
+// easing
+$easeInSine: cubic-bezier(0.47, 0, 0.745, 0.715);
+$easeOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);
+$easeInOutSine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+$easeInQuad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$easeOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+$easeInQuart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1);
+$easeInQuint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
+$easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
+$easeInExpo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
+$easeInOutExpo: cubic-bezier(1, 0, 0, 1);
+$easeInCirc: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+$easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+$easeInOutCirc: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+$easeInBack: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+
+@function vw($target) {
+  $vw-context: (750 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+//------------------------------------------------------------------------------
+//
+//	mixin
+//  
+//------------------------------------------------------------------------------
+
+// base easing
+@mixin transition {
+	transition: all .3s $easeOutCubic;
+	-webkit-transition: all .3s $easeOutCubic;
+}
+
+// Media queries
+@mixin sm {
+	@media screen and ($sm) {
+		@content;
+	}
+}
+@mixin sp {
+	@media screen and ($sp) {
+		@content;
+	}
+}
+@mixin tab {
+	@media screen and ($tab) {
+		@content;
+	}
+}
+@mixin tab_lg_only {
+  @media screen and ($pc) and ($tab_lg) {
+    @content;
+  }
+}
+@mixin tab_lg {
+  @media screen and ($tab_lg) {
+    @content;
+  }
+}
+@mixin tab_md_only {
+  @media screen and ($pc) and ($tab_md) {
+    @content;
+  }
+}
+@mixin tab_md {
+  @media screen and ($tab_md) {
+    @content;
+  }
+}
+@mixin pc {
+	@media print, screen and ($pc) {
+		@content;
+	}
+}
+
+@mixin max-screen($breakpoint) {
+  @media print, screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+@mixin min-screen($breakpoint) {
+  @media print, screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+@mixin screen($breakpoint-min, $breakpoint-max) {
+  @media print, screen and (min-width: $breakpoint-min) and (max-width: $breakpoint-max) {
+    @content;
+  }
+}
+
+// IE hack
+@mixin hack($IE-ver: null) {
+  @if $IE-ver == 'lteIE8' { // Below IE8
+    @media \0screen\,screen\9 {
+      @content;
+    }
+  }
+  @else if $IE-ver == 'gteIE9' { // Below IE9
+    @media screen and (min-width:0\0) {
+      @content;
+    }
+  }
+  @else if $IE-ver == 'gteIE10' { // Below IE10
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      @content;
+    }
+  }
+  @else if $IE-ver == 'gteIE11' { // Below IE11
+    @at-root _:-ms-fullscreen,:root & {
+      @content;
+    }
+  }
+  @else if $IE-ver == 'notIE8' { //When not IE8 (including other browsers)
+    @media all and (min-width: 0) {
+      @content;
+    }
+  }
+}
+
+@mixin hover {
+  @include pc {
+    &:hover {
+      @content;
+    }
+  }
+}

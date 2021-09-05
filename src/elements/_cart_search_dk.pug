@@ -1,0 +1,18 @@
+.cartsearch
+  .searchhd
+    span.iconsearch
+      i.fa.fa-search
+    form.input-group.search-bar(action='/search', method='get', role='search')
+      input.input-group-field.auto-search(type='text', name='query', autocomplete='off', required, placeholder='Tìm kiếm...')
+      button.visible_index.btn.icon-fallback-text(type='submit')
+        i.fa.fa-search
+  .carthd
+    .mini-cart.text-xs-center
+      .heading-cart.cart_header
+        a.img_hover_cart(href='/cart', title='Giỏ hàng')
+          .icon_hotline
+            i.fas.fa-shopping-basket.iconcart
+            span.bolds.cartext
+              | Giỏ hàng (
+              span.count_item.count_item_pr 0
+              | )

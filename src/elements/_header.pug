@@ -1,0 +1,15 @@
+header.header
+  .mid-header
+    .container.content_header
+      .row.align-items-center
+        .col-xl-3.col-lg-3.col-12
+          .menu-bar-mobile.d-block.d-lg-none: i.fa.fa-bars
+          .logo
+            a.logo-wrapper(href='/')
+              img(src='./templates/images/logo.svg' alt='vé máy bay Thanh Tùng')
+          a.cart-mobile-header.d-block.d-lg-none(href='/cart')
+            i.fas.fa-shopping-basket
+            span.count_item 0
+        .col-xl-8.col-lg-8.col-12
+          block head
+            include _head_nav.pug

@@ -1,0 +1,162 @@
+doctype html
+html(lang="vi")
+  head
+    title #{TITLE}
+    meta(charset="utf-8")
+    meta(name="description" content="DESCRIPTION")
+    meta(name="keywords" content="KEYWORDS")
+    meta(name="format-detection" content="telephone=no")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel='shortcut icon' type='image/x-icon' href='/templates/images/favicon.png')
+    link(rel='icon' type='image/x-icon' href='/templates/images/favicon.png')
+    link(rel='canonical' href='https://vemaybaythanhtung.com/')
+    //- google
+    meta(itemprop='name' content='Vé máy bay thanh tùng')
+    meta(itemprop='description' content='DESCRIPTION')
+    meta(itemprop='image' content='/templates/images/icon.png')
+    //- Twitter
+    meta(name='twitter:card' content='summary_large_image')
+    meta(name='twitter:site' content='@publisher_handle')
+    meta(name='twitter:title' content='Vé máy bay thanh tùng')
+    meta(name='twitter:description' content='DESCRIPTION')
+    meta(name='twitter:creator' content='@author_handle')
+    meta(name='twitter:image:src' content='/templates/images/icon.png')
+    //- facebook
+    meta(property='og:title' content='Vé máy bay thanh tùng')
+    meta(property='og:type' content='article')
+    meta(property='og:url' content='https://vemaybaythanhtung.com/')
+    meta(property='og:image' content='/templates/images/icon.png')
+    meta(property='og:description' content='DESCRIPTION')
+    meta(property='og:site_name' content='Vé máy bay thanh tùng')
+
+    //- CSS
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet")
+    link(href="./templates/css/grid.css" rel="stylesheet")
+    link(rel='stylesheet', href='./templates/css/vendor/swiper-bundle.min.css')
+    link(rel='stylesheet', href='./templates/css/vendor/animate.min.css')
+    link(href="./templates/css/style.css" rel="stylesheet")
+
+body
+  //- header
+  block header
+    include ./elements/_header_top.pug
+  - var title_page = "Tin tức";
+  - var title_breadcrumb = "Tin tức";
+  - var news = true
+  block header
+    include ./elements/_header.pug
+    include ./elements/_bread-crumb.pug
+
+  section.page.page_default.js-animate
+    .container
+      section.list-blogs
+        .row
+          .col-lg-4.col-md-6.col-12
+            .news_item.margin-bottom-25
+              .blog-img
+                a.scale_hover.image_thumb(href='#')
+                  p: img(src='./templates/images/nhung-dieu-can-luu-y-ve-nuoc-rua-tay-diet-trung-2.jpeg', alt='Nước rửa tay khô không an toàn như bạn tưởng')
+                  .viewmore
+                    i.far.fa-eye
+                    | Chi tiết  
+              .blog_content
+                span.time_post
+                  i.far.fa-calendar-alt
+                  | Thứ Fri, 07/09/2018
+                h3
+                  a.text2line(href='#') Nước rửa tay khô không an toàn như bạn tưởng
+                p.des_post.text3line Mỗi năm Việt Nam có hơn 126.000 ca mắc mới mắc bệnh ung thư, trong số đó khoảng 94.000 người tử vong vì phát hiện quá muộn. Việt Nam cũng là một trong những quốc gia có tỷ lệ người dân đi tầm soát ung thư thấp nhất. Nếu được tầm soát và phát hiện sớm, những căn bệnh ung thư sau có thể chữa khỏi hoàn toàn:
+
+          .col-lg-4.col-md-6.col-12
+            .news_item.margin-bottom-25
+              .blog-img
+                a.scale_hover.image_thumb(href='#')
+                  p: img(src='./templates/images/thieu-mau-2-800x500.jpeg', alt='Lại báo động khan hiếm nhóm máu O trong điều trị')
+                  .viewmore
+                    i.far.fa-eye
+                    | Chi tiết  
+              .blog_content
+                span.time_post
+                  i.far.fa-calendar-alt
+                  | Thứ Fri, 07/09/2018
+                h3
+                  a.text2line(href='#') Lại báo động khan hiếm nhóm máu O trong điều trị
+                p.des_post.text3line Mỗi năm Việt Nam có hơn 126.000 ca mắc mới mắc bệnh ung thư, trong số đó khoảng 94.000 người tử vong vì phát hiện quá muộn. Việt Nam cũng là một trong những quốc gia có tỷ lệ người dân đi tầm soát ung thư thấp nhất. Nếu được tầm soát và phát hiện sớm, những căn bệnh ung thư sau có thể chữa khỏi hoàn toàn:
+
+          .col-lg-4.col-md-6.col-12
+            .news_item.margin-bottom-25
+              .blog-img
+                a.scale_hover.image_thumb(href='#')
+                  p: img(src='./templates/images/hiv-aids-services-800x500.jpeg', alt='áo động tình trạng trẻ nhiễm HIV ngày càng cao')
+                  .viewmore
+                    i.far.fa-eye
+                    | Chi tiết  
+              .blog_content
+                span.time_post
+                  i.far.fa-calendar-alt
+                  | Thứ Fri, 07/09/2018
+                h3
+                  a.text2line(href='#') Báo động tình trạng trẻ nhiễm HIV ngày càng cao
+                p.des_post.text3line Mỗi năm Việt Nam có hơn 126.000 ca mắc mới mắc bệnh ung thư, trong số đó khoảng 94.000 người tử vong vì phát hiện quá muộn. Việt Nam cũng là một trong những quốc gia có tỷ lệ người dân đi tầm soát ung thư thấp nhất. Nếu được tầm soát và phát hiện sớm, những căn bệnh ung thư sau có thể chữa khỏi hoàn toàn:
+
+          .col-lg-4.col-md-6.col-12
+            .news_item.margin-bottom-25
+              .blog-img
+                a.scale_hover.image_thumb(href='#')
+                  p: img(src='./templates/images/nhung-dieu-can-luu-y-ve-nuoc-rua-tay-diet-trung-2.jpeg', alt='Nước rửa tay khô không an toàn như bạn tưởng')
+                  .viewmore
+                    i.far.fa-eye
+                    | Chi tiết  
+              .blog_content
+                span.time_post
+                  i.far.fa-calendar-alt
+                  | Thứ Fri, 07/09/2018
+                h3
+                  a.text2line(href='#') Nước rửa tay khô không an toàn như bạn tưởng
+                p.des_post.text3line Mỗi năm Việt Nam có hơn 126.000 ca mắc mới mắc bệnh ung thư, trong số đó khoảng 94.000 người tử vong vì phát hiện quá muộn. Việt Nam cũng là một trong những quốc gia có tỷ lệ người dân đi tầm soát ung thư thấp nhất. Nếu được tầm soát và phát hiện sớm, những căn bệnh ung thư sau có thể chữa khỏi hoàn toàn:
+
+          .col-lg-4.col-md-6.col-12
+            .news_item.margin-bottom-25
+              .blog-img
+                a.scale_hover.image_thumb(href='#')
+                  p: img(src='./templates/images/thieu-mau-2-800x500.jpeg', alt='Lại báo động khan hiếm nhóm máu O trong điều trị')
+                  .viewmore
+                    i.far.fa-eye
+                    | Chi tiết  
+              .blog_content
+                span.time_post
+                  i.far.fa-calendar-alt
+                  | Thứ Fri, 07/09/2018
+                h3
+                  a.text2line(href='#') Lại báo động khan hiếm nhóm máu O trong điều trị
+                p.des_post.text3line Mỗi năm Việt Nam có hơn 126.000 ca mắc mới mắc bệnh ung thư, trong số đó khoảng 94.000 người tử vong vì phát hiện quá muộn. Việt Nam cũng là một trong những quốc gia có tỷ lệ người dân đi tầm soát ung thư thấp nhất. Nếu được tầm soát và phát hiện sớm, những căn bệnh ung thư sau có thể chữa khỏi hoàn toàn:
+
+          .col-lg-4.col-md-6.col-12
+            .news_item.margin-bottom-25
+              .blog-img
+                a.scale_hover.image_thumb(href='#')
+                  p: img(src='./templates/images/hiv-aids-services-800x500.jpeg', alt='áo động tình trạng trẻ nhiễm HIV ngày càng cao')
+                  .viewmore
+                    i.far.fa-eye
+                    | Chi tiết  
+              .blog_content
+                span.time_post
+                  i.far.fa-calendar-alt
+                  | Thứ Fri, 07/09/2018
+                h3
+                  a.text2line(href='#') Báo động tình trạng trẻ nhiễm HIV ngày càng cao
+                p.des_post.text3line Mỗi năm Việt Nam có hơn 126.000 ca mắc mới mắc bệnh ung thư, trong số đó khoảng 94.000 người tử vong vì phát hiện quá muộn. Việt Nam cũng là một trong những quốc gia có tỷ lệ người dân đi tầm soát ung thư thấp nhất. Nếu được tầm soát và phát hiện sớm, những căn bệnh ung thư sau có thể chữa khỏi hoàn toàn:
+
+
+
+  //- footer
+  block footer
+    include ./elements/_footer.pug
+  block menu_mobile
+    include ./elements/_menu_mobile.pug
+
+  script(src="./templates/js/vendor/jquery.min.js")
+  script(src='./templates/js/vendor/swiper-bundle.min.js')
+  script(src='./templates/js/vendor/wow.min.js')
+  script(src="./templates/js/default.js")

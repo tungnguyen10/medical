@@ -1,0 +1,70 @@
+.bread-crumb {
+    background: #fff;
+    padding: 110px 0;
+    margin-bottom: 10px;
+    position: relative;
+    background: url("../images/bg_bread_crumb.jpg") no-repeat center center/cover;
+    h1{
+        color: #fff;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: initial;
+    }
+    @include sp{
+        padding: 40px 0;
+    }
+    .breadcrumb {
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        font-size: 14px;
+        padding: 0px;
+        border-radius: 0;
+        font-weight: 400;
+        line-height: 24px;
+        background-color: transparent;
+        width: 100%;
+        text-align: left;
+        position: relative;
+      
+        li {
+          display: inline;
+      
+          > a {
+            color: #fff;
+      
+            > span {
+              color: #fff;
+            }
+          }
+      
+          .mr_lr {
+            padding: 0px 3px;
+            color: #fff;
+          }
+      
+          span {
+            display: inline;
+            color: #fff;
+      
+            .fa {
+              color: #fff;
+              padding: 0px 5px;
+            }
+          }
+      
+          a:hover, &.active, strong {
+            color: #00ea20;
+            font-weight: 400;
+            text-decoration: none;
+          }
+      
+          a:hover span, &.active span, strong span {
+            color: #00ea20;
+          }
+        }
+      
+        > li + li:before {
+          display: none;
+        }
+      }
+  }

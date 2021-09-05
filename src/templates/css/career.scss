@@ -1,0 +1,134 @@
+@charset "utf-8";
+@import "./base/_setting.scss";
+
+.section__content-careers {
+  .block {
+    &__careers-items {
+      &__item {
+        position: relative;
+        display: flex;
+        padding-bottom: 8%;
+        align-items: center;
+        justify-content: space-between;
+        @include pc{
+          padding-bottom: 40px;
+        }
+
+        &:not(:last-child) {
+          &::before {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), #E5E5E5, rgba(255, 255, 255, 0));
+
+          }
+        }
+
+        &:not(:first-child) {
+          margin-top: 8%;
+          @include pc{
+            margin-top: 40px;
+          }
+        }
+
+        .left {
+          position: relative;
+          width: 120px;
+          height: 120px;
+          border-radius: 100%;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          box-shadow: 6px 6px 20px 0px rgba(0, 0, 0, 0.25);
+          -moz-box-shadow: 6px 6px 20px 0px rgba(0, 0, 0, 0.25);
+          -webkit-box-shadow: 6px 6px 20px 0px rgba(0, 0, 0, 0.25);
+          flex-shrink: 0;
+         
+          @include pc{
+            width: 250px;
+            height: 250px;
+          }
+          @include tab_lg_only{
+            width: 200px;
+            height: 200px;
+          }
+          a{
+            display: block;
+          }
+          img {
+            min-width: 100%;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+          }
+
+        }
+
+        &:nth-child(2n + 2) {
+          .left {
+            border-top-left-radius: 0;
+          }
+        }
+
+        &:nth-child(2n + 1) {
+          .left {
+            border-bottom-right-radius: 0;
+          }
+        }
+
+        .right {
+          display: flex;
+          padding-left: 5%;
+          flex-direction: column;
+          flex: 1;
+          .date_post {
+            font-size: 12px;
+            line-height: 1.7;
+            letter-spacing: -0.03em;
+            color: $keycolor;
+            margin-bottom: 3%;
+            @include pc {
+              font-size: 14px;
+            }
+          }
+          .btn-main{
+            @include sp{
+              height: 30px;
+    line-height: 30px;
+            }
+          }
+
+          .title_post {
+            font-size: 18px;
+            line-height: 120%;
+            letter-spacing: -0.03em;
+            margin-bottom: 8px;
+            line-break: anywhere;
+            @include pc {
+              font-size: 25px;
+            }
+          }
+
+          .des_post {
+            font-size: 14px;
+            margin-bottom: 3%;
+
+            @include pc {
+              font-size: 14px;
+            }
+
+            p {
+              margin: 0;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

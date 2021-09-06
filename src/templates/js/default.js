@@ -122,6 +122,14 @@ $(function () {
   $(".datepick").datepicker({
     dateFormat: "dd-mm-yy"
   });
+  $(".datepick").keyup(function() {
+    let val = $(this).val().split("-").join("");
+    if(val.length >0){
+     val = val.replace(/(\d{2})(\d{2})(\d*)/, '$1-$2-$3');
+    }
+    $(this).val(val);
+    });
+  
   spriteSvg();
   $('.nav-link').click(function () {
     var tab_id = $(this).attr('data-tab');

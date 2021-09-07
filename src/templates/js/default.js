@@ -119,15 +119,14 @@ function spriteSvg() {
 }
 $(function () {
   new WOW().init();
-  $(".datepick").datepicker({
-    dateFormat: "dd-mm-yy"
-  });
+ 
   $(".datepick").keyup(function() {
     let val = $(this).val().split("-").join("");
+    
     if(val.length >0){
      val = val.replace(/(\d{2})(\d{2})(\d*)/, '$1-$2-$3');
     }
-    $(this).val(val);
+    $(this).val(val).reg;
     });
   
   spriteSvg();
@@ -285,4 +284,8 @@ $('#xacnhan').on('change', function () {
     $('#mui1').addClass("hide");
     $('#mui2').addClass("hide");
   }
+});
+
+$(".datepick").datepicker({
+  dateFormat: "dd-mm-yy"
 });

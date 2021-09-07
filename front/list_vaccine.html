@@ -89,169 +89,147 @@
     <div class="container">
       <div class="rows">
         <div class="col-xs-12 a-left">
-          <h1 class="title_h1">Đăng ký xét nghiệm COVID-19</h1>
+          <h1 class="title_h1">Danh sách xét nghiệm COVID-19</h1>
           <ul class="breadcrumb">
             <li class="home"><a href="/"><span>Trang chủ</span></a><span class="mr_lr"> <i class="fa fa-angle-right"></i> </span></li>
-            <li><strong><span>Tờ khai thông tin</span></strong></li>
+            <li><strong><span>Danh sách xét nghiệm</span></strong></li>
           </ul>
         </div>
       </div>
     </div>
   </section>
   <section class="page page_default js-animate">
-    <form class="form-register" action method="post">
-      <div class="form-row">
-        <div class="container">
-          <div class="row"> 
-            <label class="title_form col-lg-12 col-md-12 col-sm-12 col-xs-12" for>Thông tin cơ bản</label>
-            <div class="form-group col-lg-6 col-md-12 col-sm-12 col-xs-12">
-              <label for>Họ và tên <i> *</i></label>
-              <input class="form-control" type="text" name required placeholder="Nguyễn Văn A">
-            </div>
-            <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <label for>Số CMND/CCCD <i> *</i></label>
-              <input class="form-control" type="text" name required placeholder="123456789">
-            </div>
-            <div class="form-group col-lg-4 col-md-6 col-sm-12 col-xs-12">
-              <label for>Số điện thoại <i> *</i></label>
-              <input class="form-control" type="text" name required placeholder="0968123456">
-            </div>
-            <div class="form-group col-lg-4 col-md-6 col-sm-12 col-xs-12">
-              <label for>Ngày sinh <i> *</i></label>
-              <input class="form-control datepick" type="text" name required placeholder="01-01-2002" value="">
-            </div>
-            <div class="form-group col-lg-4 col-md-6 col-sm-12 col-xs-12">
-              <label for="gender">Giới tính <i> *</i>
-                <div class="gender">
-                  <p>
-                    <label>
-                      <input type="radio" value="Nam" checked name="fields[gender]"> Nam
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input type="radio" value="Nu" name="fields[gender]"> Nữ
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input type="radio" value="Khac" name="fields[gender]"> Khác 
-                    </label>
-                  </p>
-                </div>
-                <div>
-                  <label class="error" for="fields[gender]"></label>
-                </div>
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="title_form" for>Địa chỉ thường trú</label>
-            <div class="row">
-              <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                <label for>Tỉnh/Thành phố <i> *</i></label>
-                <select class="form-control" type="text" name required>
-                  <option value="0">Tỉnh/Thành phố</option>
-                </select>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                <label for>Quận/huyện <i> *</i></label>
-                <select class="form-control" type="text" name required>
-                  <option value="0">Quận/huyện</option>
-                </select>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                <label for>Xã/phường <i> *</i></label>
-                <select class="form-control" type="text" name required>
-                  <option value="0">Xã/phường</option>
-                </select>
-              </div>
-              <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
-                <label for>Số nhà, tên đường <i> *</i></label>
-                <input class="form-control" type="text" name required placeholder="Số nhà, tên đường">
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="title_form" for>Địa chỉ tạm trú</label>
-            <div class="row">
-              <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                <label for>Tỉnh/Thành phố <i> *</i></label>
-                <select class="form-control" type="text" name required>
-                  <option value="0">Tỉnh/Thành phố</option>
-                </select>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                <label for>Quận/huyện <i> *</i></label>
-                <select class="form-control" type="text" name required>
-                  <option value="0">Quận/huyện</option>
-                </select>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                <label for>Xã/phường <i> *</i></label>
-                <select class="form-control" type="text" name required>
-                  <option value="0">Xã/phường</option>
-                </select>
-              </div>
-              <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
-                <label for>Số nhà, tên đường <i> *</i></label>
-                <input class="form-control" type="text" name required placeholder="Số nhà, tên đường">
-              </div>
-            </div>
-          </div>
-          <div class="row"> 
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-              <div class="form-group inline">
-                <label class="title_form" for>Đã tiêm vắc xin chưa? <i> *</i></label>
-                <select class="form-control" id="xacnhan" name>
-                  <option value="0">Chưa tiêm</option>
-                  <option value="1">Đã tiêm</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="form-group col-lg-6 col-md-12 col-sm-12 col-xs-12 hide" id="mui1">
-              <label class="title_form" for>Đã tiêm mũi 1</label>
-              <div class="row">
-                <div class="form-group col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                  <label for>Ngày tiêm <i> *</i></label>
-                  <input class="form-control datepick" type="text" name required placeholder="01-01-2002">
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                  <label for>Loại Vắc xin <i> *</i></label>
-                  <select class="form-control" type="text" name required>
-                    <option value="0">Loại Vắc xin</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="form-group col-lg-6 col-md-12 col-sm-12 col-xs-12 hide" id="mui2">
-              <label class="title_form" for>Đã tiêm mũi 2</label>
-              <div class="row">
-                <div class="form-group col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                  <label for>Ngày tiêm <i> *</i></label>
-                  <input class="form-control datepick" type="text" name required placeholder="01-01-2002">
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                  <label for>Loại Vắc xin <i> *</i></label>
-                  <select class="form-control" type="text" name required>
-                    <option value="0">Loại Vắc xin</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="form-btn">
+    <div class="container">
+      <div class="row"> 
+        <div class="col-12">
+          <form class="form-search" name="frm-search" action="#" method="post">
             <div class="form-group">
-              <input id="camket" type="checkbox" name>
-              <label for="camket">Tôi cam đoan các thông tin khai báo là đúng sự thật và hoàn toàn chịu trách nhiệm trước pháp luật về tính chính xác của thông tin</label>
+              <select class="form-control" id="tinhthanh" name>
+                <option>Tỉnh/TP</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
             </div>
-            <button class="btn-main" type="submit"> <span>Đăng ký<i class="fa fa-angle-double-right"></i></span></button>
+            <div class="form-group">
+              <select class="form-control" id="quanhuyen" name>
+                <option>Quận/huyện</option>
+                <option value="1">Phường</option>
+                <option value="2">Phường</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select class="form-control" id="xaphuong" name>
+                <option>Xã/phường</option>
+                <option value="1">Phường</option>
+                <option value="2">Phường</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input class="form-control" id="diachi" type="text" placeholder="Số nhà, tên đường" required>
+            </div>
+            <button class="btn-main" type="submit"> <span>Tìm kiếm<i class="fas fa-search-location"></i></span></button>
+          </form>
+        </div>
+        <div class="col-12">
+          <div class="table-wrapper">
+            <table class="fl-table">
+              <thead>
+                <tr>
+                  <th>STT</th>
+                  <th>đợt test covid-19</th>
+                  <th>địa điểm</th>
+                  <th>ngày bắt đầu đăng ký</th>
+                  <th>ngày kết thúc</th>
+                  <th>thao tác</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="font-weight-bold">1</td>
+                  <td>Đợt test COVID-19 1</td>
+                  <td>Địa điểm 1</td>
+                  <td class="text-right">1/1/1</td>
+                  <td class="text-right">1/1/1</td>
+                  <td><a class="action-link" title="Đăng ký" href="#"><i class="fas fa-user-edit"></i></a></td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">2</td>
+                  <td>Đợt test COVID-19 2</td>
+                  <td>Địa điểm 2</td>
+                  <td class="text-right">2/2/2</td>
+                  <td class="text-right">2/2/2</td>
+                  <td><a class="action-link" title="Đăng ký" href="#"><i class="fas fa-user-edit"></i></a></td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">3</td>
+                  <td>Đợt test COVID-19 3</td>
+                  <td>Địa điểm 3</td>
+                  <td class="text-right">3/3/3</td>
+                  <td class="text-right">3/3/3</td>
+                  <td><a class="action-link" title="Đăng ký" href="#"><i class="fas fa-user-edit"></i></a></td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">4</td>
+                  <td>Đợt test COVID-19 4</td>
+                  <td>Địa điểm 4</td>
+                  <td class="text-right">4/4/4</td>
+                  <td class="text-right">4/4/4</td>
+                  <td><a class="action-link" title="Đăng ký" href="#"><i class="fas fa-user-edit"></i></a></td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">5</td>
+                  <td>Đợt test COVID-19 5</td>
+                  <td>Địa điểm 5</td>
+                  <td class="text-right">5/5/5</td>
+                  <td class="text-right">5/5/5</td>
+                  <td><a class="action-link" title="Đăng ký" href="#"><i class="fas fa-user-edit"></i></a></td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">6</td>
+                  <td>Đợt test COVID-19 6</td>
+                  <td>Địa điểm 6</td>
+                  <td class="text-right">6/6/6</td>
+                  <td class="text-right">6/6/6</td>
+                  <td><a class="action-link" title="Đăng ký" href="#"><i class="fas fa-user-edit"></i></a></td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">7</td>
+                  <td>Đợt test COVID-19 7</td>
+                  <td>Địa điểm 7</td>
+                  <td class="text-right">7/7/7</td>
+                  <td class="text-right">7/7/7</td>
+                  <td><a class="action-link" title="Đăng ký" href="#"><i class="fas fa-user-edit"></i></a></td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">8</td>
+                  <td>Đợt test COVID-19 8</td>
+                  <td>Địa điểm 8</td>
+                  <td class="text-right">8/8/8</td>
+                  <td class="text-right">8/8/8</td>
+                  <td><a class="action-link" title="Đăng ký" href="#"><i class="fas fa-user-edit"></i></a></td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">9</td>
+                  <td>Đợt test COVID-19 9</td>
+                  <td>Địa điểm 9</td>
+                  <td class="text-right">9/9/9</td>
+                  <td class="text-right">9/9/9</td>
+                  <td><a class="action-link" title="Đăng ký" href="#"><i class="fas fa-user-edit"></i></a></td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">10</td>
+                  <td>Đợt test COVID-19 10</td>
+                  <td>Địa điểm 10</td>
+                  <td class="text-right">10/10/10</td>
+                  <td class="text-right">10/10/10</td>
+                  <td><a class="action-link" title="Đăng ký" href="#"><i class="fas fa-user-edit">   </i></a></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
-    </form>
+    </div>
   </section>
   <footer class="js-animate">
     <div class="topfoter">

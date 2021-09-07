@@ -1,0 +1,190 @@
+doctype html
+html(lang="vi")
+  head
+    title #{TITLE}
+    meta(charset="utf-8")
+    meta(name="description" content="DESCRIPTION")
+    meta(name="keywords" content="KEYWORDS")
+    meta(name="format-detection" content="telephone=no")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel='shortcut icon' type='image/x-icon' href='/templates/images/favicon.png')
+    link(rel='icon' type='image/x-icon' href='/templates/images/favicon.png')
+    link(rel='canonical' href='https://vemaybaythanhtung.com/')
+    //- google
+    meta(itemprop='name' content='Vé máy bay thanh tùng')
+    meta(itemprop='description' content='DESCRIPTION')
+    meta(itemprop='image' content='/templates/images/icon.png')
+    //- Twitter
+    meta(name='twitter:card' content='summary_large_image')
+    meta(name='twitter:site' content='@publisher_handle')
+    meta(name='twitter:title' content='Vé máy bay thanh tùng')
+    meta(name='twitter:description' content='DESCRIPTION')
+    meta(name='twitter:creator' content='@author_handle')
+    meta(name='twitter:image:src' content='/templates/images/icon.png')
+    //- facebook
+    meta(property='og:title' content='Vé máy bay thanh tùng')
+    meta(property='og:type' content='article')
+    meta(property='og:url' content='https://vemaybaythanhtung.com/')
+    meta(property='og:image' content='/templates/images/icon.png')
+    meta(property='og:description' content='DESCRIPTION')
+    meta(property='og:site_name' content='Vé máy bay thanh tùng')
+
+    //- CSS
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet")
+    link(href="./templates/css/grid.css" rel="stylesheet")
+    link(rel='stylesheet', href='./templates/css/vendor/swiper-bundle.min.css')
+    link(rel='stylesheet', href='./templates/css/vendor/animate.min.css')
+    link(rel='stylesheet', href='./templates/css/vendor/jquery-ui.css')
+    link(href="./templates/css/style.css" rel="stylesheet")
+
+body
+  //- header
+  block header
+    include ./elements/_header_top.pug
+  - var title_page = "Danh sách xét nghiệm COVID-19";
+  - var title_breadcrumb = "Danh sách xét nghiệm";
+  block header
+    include ./elements/_header.pug
+    include ./elements/_bread-crumb.pug
+
+  section.page.page_default.js-animate
+    .container
+      .row 
+        .col-12
+          form.form-search(name='frm-search', action='#', method='post')
+            .form-group
+              select.form-control#tinhthanh(name)
+                option Tỉnh/TP
+                option(value='1') 1
+                option(value='2') 2
+            .form-group
+              select.form-control#quanhuyen(name)
+                option Quận/huyện
+                option(value='1') Phường
+                option(value='2') Phường
+            .form-group
+              select.form-control#xaphuong(name)
+                option Xã/phường
+                option(value='1') Phường
+                option(value='2') Phường
+            .form-group
+              input.form-control#diachi(type='text', placeholder='Số nhà, tên đường', required)
+            button.btn-main(type='submit') 
+              span Tìm kiếm
+                i.fas.fa-search-location
+          
+        .col-12
+          .table-wrapper
+            table.fl-table
+              thead
+                tr
+                  th STT
+                  th đợt test covid-19
+                  th địa điểm
+                  th ngày bắt đầu đăng ký
+                  th ngày kết thúc
+                  th thao tác
+              tbody
+                tr
+                  td.font-weight-bold 1
+                  td Đợt test COVID-19 1
+                  td Địa điểm 1
+                  td.text-right 1/1/1
+                  td.text-right 1/1/1
+                  td
+                    a.action-link(title='Đăng ký', href='#')
+                      i.fas.fa-user-edit
+                tr
+                  td.font-weight-bold 2
+                  td Đợt test COVID-19 2
+                  td Địa điểm 2
+                  td.text-right 2/2/2
+                  td.text-right 2/2/2
+                  td
+                    a.action-link(title='Đăng ký', href='#')
+                      i.fas.fa-user-edit
+                tr
+                  td.font-weight-bold 3
+                  td Đợt test COVID-19 3
+                  td Địa điểm 3
+                  td.text-right 3/3/3
+                  td.text-right 3/3/3
+                  td
+                    a.action-link(title='Đăng ký', href='#')
+                      i.fas.fa-user-edit
+                tr
+                  td.font-weight-bold 4
+                  td Đợt test COVID-19 4
+                  td Địa điểm 4
+                  td.text-right 4/4/4
+                  td.text-right 4/4/4
+                  td
+                    a.action-link(title='Đăng ký', href='#')
+                      i.fas.fa-user-edit
+                tr
+                  td.font-weight-bold 5
+                  td Đợt test COVID-19 5
+                  td Địa điểm 5
+                  td.text-right 5/5/5
+                  td.text-right 5/5/5
+                  td
+                    a.action-link(title='Đăng ký', href='#')
+                      i.fas.fa-user-edit
+                tr
+                  td.font-weight-bold 6
+                  td Đợt test COVID-19 6
+                  td Địa điểm 6
+                  td.text-right 6/6/6
+                  td.text-right 6/6/6
+                  td
+                    a.action-link(title='Đăng ký', href='#')
+                      i.fas.fa-user-edit
+                tr
+                  td.font-weight-bold 7
+                  td Đợt test COVID-19 7
+                  td Địa điểm 7
+                  td.text-right 7/7/7
+                  td.text-right 7/7/7
+                  td
+                    a.action-link(title='Đăng ký', href='#')
+                      i.fas.fa-user-edit
+                tr
+                  td.font-weight-bold 8
+                  td Đợt test COVID-19 8
+                  td Địa điểm 8
+                  td.text-right 8/8/8
+                  td.text-right 8/8/8
+                  td
+                    a.action-link(title='Đăng ký', href='#')
+                      i.fas.fa-user-edit
+                tr
+                  td.font-weight-bold 9
+                  td Đợt test COVID-19 9
+                  td Địa điểm 9
+                  td.text-right 9/9/9
+                  td.text-right 9/9/9
+                  td
+                    a.action-link(title='Đăng ký', href='#')
+                      i.fas.fa-user-edit
+                tr
+                  td.font-weight-bold 10
+                  td Đợt test COVID-19 10
+                  td Địa điểm 10
+                  td.text-right 10/10/10
+                  td.text-right 10/10/10
+                  td
+                    a.action-link(title='Đăng ký', href='#')
+                      i.fas.fa-user-edit    
+                    
+  //- footer
+  block footer
+    include ./elements/_footer.pug
+  block menu_mobile
+    include ./elements/_menu_mobile.pug
+
+  script(src="./templates/js/vendor/jquery.min.js")
+  script(src='./templates/js/vendor/swiper-bundle.min.js')
+  script(src='./templates/js/vendor/jquery-ui.min.js')
+  script(src='./templates/js/vendor/wow.min.js')
+  script(src="./templates/js/default.js")

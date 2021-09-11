@@ -176,7 +176,11 @@ body
                   td
                     a.action-link(title='Đăng ký', href='#')
                       i.fas.fa-edit    
-                    
+
+        .col-12 
+          block header
+            include ./elements/_stepper.pug
+
   //- footer
   block footer
     include ./elements/_footer.pug

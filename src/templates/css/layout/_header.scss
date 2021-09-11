@@ -9,6 +9,24 @@
 .header { 
 
 }
+.language_flags {
+  display: flex;
+  gap: 10px;
+  width: 80px;
+  li{
+    position: relative;
+    width: 50%;
+    height: 20px;
+    a{
+      display: block;
+      width: 100%;
+      img{
+        position: absolute; object-fit: cover;
+        width: 100%;
+      }
+    }
+  }
+}
 .tophead {
   height: 47px;
   line-height: 47px;
@@ -27,9 +45,12 @@
   }
 
   .group_topbar {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
     float: right;
-
+    gap: 20px;
     .time_header {
       display: inline-block;
       margin-right: 20px;
@@ -96,7 +117,10 @@
           border-width: 0 10px 13px 10px;
           border-color: transparent transparent #fff transparent;
         }
-
+        i{
+          display: inline-block;
+          margin-right: 8px;
+        }
         a {
           display: block;
           text-align: left;

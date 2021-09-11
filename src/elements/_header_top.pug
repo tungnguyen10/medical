@@ -3,13 +3,16 @@
     .welcome-header
       | Chào mừng bạn đến với phòng vé máy bay Thanh Tùng
     .group_topbar
-      .time_header
-        i.far.fa-clock
-        span Thời gian làm việc: 8:00 - 19:00
+      block header
+        include _language_flags.pug
       .account
         .ac_hover
           i.far.fa-user
           span Tài khoản
         .group_ac
-          a.btnx(href='/account/login') Đăng nhập
-          a(href='/account/register') Đăng ký 
+          a.btnx(href='/account/login') 
+            i.fas.fa-sign-in-alt 
+            | Đăng nhập
+          a(href='/account/register') 
+            i.fas.fa-user-edit 
+            | Đăng ký 

@@ -1,42 +1,8 @@
 doctype html
 html(lang="vi")
-  head
-    title #{TITLE}
-    meta(charset="utf-8")
-    meta(name="description" content="DESCRIPTION")
-    meta(name="keywords" content="KEYWORDS")
-    meta(name="format-detection" content="telephone=no")
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-
-    link(rel='shortcut icon' type='image/x-icon' href='/templates/images/favicon.png')
-    link(rel='icon' type='image/x-icon' href='/templates/images/favicon.png')
-    link(rel='canonical' href='https://vemaybaythanhtung.com/')
-    //- google
-    meta(itemprop='name' content='Vé máy bay thanh tùng')
-    meta(itemprop='description' content='DESCRIPTION')
-    meta(itemprop='image' content='/templates/images/icon.png')
-    //- Twitter
-    meta(name='twitter:card' content='summary_large_image')
-    meta(name='twitter:site' content='@publisher_handle')
-    meta(name='twitter:title' content='Vé máy bay thanh tùng')
-    meta(name='twitter:description' content='DESCRIPTION')
-    meta(name='twitter:creator' content='@author_handle')
-    meta(name='twitter:image:src' content='/templates/images/icon.png')
-    //- facebook
-    meta(property='og:title' content='Vé máy bay thanh tùng')
-    meta(property='og:type' content='article')
-    meta(property='og:url' content='https://vemaybaythanhtung.com/')
-    meta(property='og:image' content='/templates/images/icon.png')
-    meta(property='og:description' content='DESCRIPTION')
-    meta(property='og:site_name' content='Vé máy bay thanh tùng')
-
-    //- CSS
-    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet")
-    link(href="./templates/css/grid.css" rel="stylesheet")
-    link(rel='stylesheet', href='./templates/css/vendor/swiper-bundle.min.css')
-    link(rel='stylesheet', href='./templates/css/vendor/animate.min.css')
-    link(href="./templates/css/style.css" rel="stylesheet")
-    link(href="./templates/css/career.css" rel="stylesheet")
+  block head
+    include ./elements/_head.pug
+  link(href="./templates/css/career.css" rel="stylesheet")
 
 body
   //- header

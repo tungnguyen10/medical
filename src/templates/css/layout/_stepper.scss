@@ -1,20 +1,16 @@
 .stepper__row {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  justify-content: center;
+  flex-direction: column;
   gap: 20px;
-  @include tab_md{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+  align-items: center;
 }
 
 .stepper--horizontal {
   display: flex;
   position: relative;
   gap: 20px;
-  width: 23%;
+  width: 25%;
   @include tab_md{
     width: 100%;
     max-width: 300px;
@@ -59,17 +55,12 @@
   &:after {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='38' height='2'%3E%3Cpath fill='%23BFCCD5' fill-rule='evenodd' d='M0 0h38v2H0'/%3E%3C/svg%3E");
     position: absolute;
-    left: 100%;
-    top: 50%;
-    transform: translate(0% , -50%) rotate(0);
-    width: 18px;
     overflow: hidden;
-    @include tab_md{
-      left: 35px;
-      top: 102%;
-      width: 20px;
-      transform: translate(-50% , 0) rotate(90deg);
-    }
+    left: 35px;
+    top: 102%;
+    width: 20px;
+    transform: translate(-50% , 0) rotate(90deg);
+    
   }
 }
 

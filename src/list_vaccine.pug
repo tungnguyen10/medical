@@ -38,6 +38,17 @@ body
             button.btn-main(type='submit') 
               span Tìm kiếm
                 i.fas.fa-search-location
+        .col-12 
+          form.form-search-vaccine(name='frm-search-vaccine', action='#', method='post')
+            .form-group
+              label(for) Số CMND/CCCD
+              input.form-control#cmnd(type='text', placeholder='123456789', required)
+            .form-group
+              label(for) Ngày Sinh 
+              input.form-control.datepick(type='text', name, required, placeholder="01-01-2002")
+            button.btn-main(type='submit') 
+              span Tìm kiếm
+                i.fas.fa-search-location
           
         .col-12
           .table-wrapper

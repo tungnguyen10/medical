@@ -1,0 +1,46 @@
+.ads_support {
+  padding: 20px 10px 35px;
+  border: 1px solid #e4e4e4;
+  margin-top: 43px;
+  text-align: center;
+
+  .support_title {
+    font-size: 18px;
+    font-family: $fontBody;
+    color: #263036;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+  }
+
+  .banner_support {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .des_sp {
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #263036;
+    font-family: $fontBody;
+    font-weight: 400;
+  }
+
+  .phone_sp {
+    font-size: 30px;
+    font-family: $fontBody;
+    font-weight: 700;
+    color: $keycolor;
+    display: block;
+    @include sp{
+      font-size: 20px;
+    }
+    @include hover{
+      color: $keycolor_dark;
+    }
+  }
+}
+
+
+

@@ -27,6 +27,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
   <link href="./templates/css/grid.css" rel="stylesheet">
   <link rel="stylesheet" href="./templates/css/vendor/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./templates/css/vendor/jquery-ui.css">
   <link rel="stylesheet" href="./templates/css/vendor/animate.min.css">
   <link href="./templates/css/style.css" rel="stylesheet">
 </html>
@@ -126,6 +127,19 @@
             </div>
             <div class="form-group">
               <input class="form-control" id="diachi" type="text" placeholder="Số nhà, tên đường" required>
+            </div>
+            <button class="btn-main" type="submit"> <span>Tìm kiếm<i class="fas fa-search-location"></i></span></button>
+          </form>
+        </div>
+        <div class="col-12"> 
+          <form class="form-search-vaccine" name="frm-search-vaccine" action="#" method="post">
+            <div class="form-group">
+              <label for>Số CMND/CCCD</label>
+              <input class="form-control" id="cmnd" type="text" placeholder="123456789" required>
+            </div>
+            <div class="form-group">
+              <label for>Ngày Sinh </label>
+              <input class="form-control datepick" type="text" name required placeholder="01-01-2002">
             </div>
             <button class="btn-main" type="submit"> <span>Tìm kiếm<i class="fas fa-search-location"></i></span></button>
           </form>

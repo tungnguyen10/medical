@@ -1,73 +1,7 @@
 @charset "utf-8";
 @import "./base/_setting.scss";
 
-.h-sub {
-  font-family: $fontBody;
-  position: relative;
-  z-index: 1;
-  margin-bottom: 17px;
-  font-size: 17px;
-  line-height: 1.2em;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: $keycolor
-}
 
-.title-wrap {
-  position: relative;
-  margin-bottom: 4rem;
-
-  .h-sub {
-    position: relative;
-    z-index: 1;
-    margin-bottom: 17px;
-    font-size: 17px;
-    line-height: 1.2em;
-    font-weight: 700;
-    font-family: $fontBody;
-    letter-spacing: 1px;
-  }
-
-  h2 {
-    font-family: $fontBody;
-    line-height: 1em;
-    margin-bottom: 10px;
-    font-weight: 700;
-    position: relative;
-
-    &:after {
-      right: auto;
-      left: 50%;
-      top: -.36em;
-      transform: translateX(-50%);
-      position: absolute;
-      z-index: 0;
-      font-size: 80px;
-      line-height: 1em;
-      white-space: nowrap;
-      content: attr(data-title);
-      color: $keycolor;
-      opacity: 0.2;
-
-      @include sp {
-        font-size: 55px;
-      }
-    }
-
-    span {
-      position: relative;
-      z-index: 1;
-    }
-  }
-
-  .h-decor {
-    position: relative;
-    display: inline-block;
-    height: 3px;
-    width: 53px;
-    background-color: $keycolor;
-  }
-}
 
 .title {
   font-family: $fontBody;
